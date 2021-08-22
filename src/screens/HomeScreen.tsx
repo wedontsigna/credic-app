@@ -33,6 +33,7 @@ export default function App({navigation}) {
           Se connecter
         </Button>
         <Button
+          onPress={() => navigation.navigate('SignIn')} 
           colorScheme="primary"
           _text={{ color: "secondary.500" }}
           variant="rounded"
