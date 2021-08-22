@@ -31,6 +31,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import theme from "./theme";
 import SignIn from "./src/screens/SignInScreen";
 import ResetPassword from "./src/screens/ResetPassword";
+import NewPassword from "./src/screens/NewPassword";
 
 const Stack = createNativeStackNavigator();
 
@@ -73,6 +74,11 @@ const App = () => {
           <Stack.Screen
             name="ResetPassword"
             component={ResetPassword}
+            options={{ headerShown: false }}
+          />
+           <Stack.Screen
+            name="NewPassword"
+            component={NewPassword}
             options={{ headerShown: false }}
           />
         </Stack.Navigator>

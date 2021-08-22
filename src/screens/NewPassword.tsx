@@ -17,7 +17,7 @@ import {
   Center
 } from 'native-base';
 
-export default function ResetPassword({navigation}) {
+export default function NewPassword({navigation}) {
 
  return (
       <NativeBaseProvider>
@@ -30,7 +30,7 @@ export default function ResetPassword({navigation}) {
       >
         <Center>
             <Heading  color='#333' fontWeight={100} >
-               Reset your password 
+              New password 
             </Heading>
         </Center>
         <Center>
@@ -42,12 +42,14 @@ export default function ResetPassword({navigation}) {
 
         <VStack space={2} mt={5}>
           <FormControl mt={5}>
-            <Input type="email" borderRadius='full' fontSize="xs" placeholder="Email" bg='#f0f0f0' />
+            <Input type="password" borderRadius='full' fontSize="xs" placeholder="New password" bg='#f0f0f0' />
            </FormControl>
-         
+           <FormControl mt={5}>
+            <Input type="password" borderRadius='full' fontSize="xs" placeholder="Confirm password" bg='#f0f0f0' />
+           </FormControl>
           <VStack  space={2}  mt={5}>
           <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('NewPassword')}  _text={{color: 'white' }}>
-              Send
+              Save
           </Button>
           </VStack>
           
