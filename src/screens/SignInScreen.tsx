@@ -67,7 +67,7 @@ export default function SignIn({navigation}) {
           </VStack>
           <Center my={5}>
             <Text fontSize="xs">Already have an account? 
-            <Text fontSize="xs" bold color="#fc6011" mx={1}>Login</Text>
+            <Text fontSize="xs" bold color="#fc6011" mx={1} onPress={() => navigation.navigate('ResetPassword')} >Login</Text>
             </Text>
           </Center>
         </VStack>
