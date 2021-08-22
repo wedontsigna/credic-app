@@ -14,8 +14,9 @@ import {
   HStack,
   Image,
 } from "native-base";
+import SignIn from "./signin";
 
-export default function App() {
+export default function App({navigation}) {
   return (
     <Center safeArea flex={1} p={2} w="100%" mx="auto">
       <Image source={require("../../assets/logo.png")} alt="logo" size="2xl" />

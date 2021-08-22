@@ -29,6 +29,7 @@ import {
 
 import HomeScreen from "./src/screens/HomeScreen";
 import theme from "./theme";
+import SignIn from "./src/screens/SignInScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,7 +64,13 @@ const App = () => {
             component={HomeScreen}
             // options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Signin"
+            component={SignIn}
+            // options={{ headerShown: false }}
+          />
         </Stack.Navigator>
+        
       </NativeBaseProvider>
     </NavigationContainer>
   );
