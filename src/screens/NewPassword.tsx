@@ -17,7 +17,7 @@ import {
   Center
 } from 'native-base';
 
-export default function NewPassword({navigation}) {
+export default function NewPassword() {
 
  return (
       <NativeBaseProvider>
