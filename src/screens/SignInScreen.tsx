@@ -17,7 +17,7 @@ import {
   Center
 } from 'native-base';
 
-export default function SignIn({navigation}) {
+export default function SignIn({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider>
