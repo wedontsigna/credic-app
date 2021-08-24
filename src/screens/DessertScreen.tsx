@@ -39,7 +39,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             <Box shadow={2}
                 mt={"5"}
                 w='100%'>
-        <Image source={require("../../assets/Dessert1.jpg")} alt="logo" width={'100%'} height={'270'} />
+        <Image source={require("../../assets/Dessert1.jpg")} alt="logo" width={'100%'} height={'220'} />
             <Text bold position='absolute'  color='white' fontWeight={100} bottom={0} m={[4, 4, 8]}>
                Desserts 01{"\n"}
                <Text color='white' fontSize='12' mb={1}>
@@ -51,7 +51,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             <Box shadow={2}
                 mt={"1"}
                 w='100%'>
-        <Image source={require("../../assets/Dessert2.jpg")} alt="logo" width={'100%'} height={'270'} />
+        <Image source={require("../../assets/Food8.jpg")} alt="logo" width={'100%'} height={'220'} />
             <Text bold position='absolute'  color='white' fontWeight={100} bottom={0} m={[4, 4, 8]}>
                Desserts 02 {"\n"}
                <Text color='white' fontSize='12' mb={1}>
@@ -63,7 +63,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             <Box shadow={2}
                 mt={"1"}
                 w='100%'>
-        <Image source={require("../../assets/Dessert3.jpg")} alt="logo" width={'100%'} height={'270'} />
+        <Image source={require("../../assets/Dessert3.jpg")} alt="logo" width={'100%'} height={'220'} />
             <Text bold position='absolute'  color='white' fontWeight={100} bottom={0} m={[4, 4, 8]}>
                Desserts 03 {"\n"}
                <Text color='white' fontSize='12' mb={1}>
@@ -75,7 +75,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             <Box shadow={2}
                 mt={"1"}
                 w='100%'>
-        <Image source={require("../../assets/Dessert4.jpg")} alt="logo" width={'100%'} height={'270'} />
+        <Image source={require("../../assets/Dessert4.jpg")} alt="logo" width={'100%'} height={'220'} />
             <Text bold position='absolute'  color='white' fontWeight={100} bottom={0} m={[4, 4, 8]}>
                Desserts 04 {"\n"}
                <Text color='white' fontSize='12' mb={1}>

@@ -68,7 +68,8 @@ export default function LoginScreen({navigation}: {navigation: any}) {
        bg="blue.800"
        borderRadius='full'  
        _text={{color: 'white' }}         
-       shadow={2}>         
+       shadow={2}
+       onPress={() => navigation.navigate('LastOffersScreen')}>         
              Login with Facebook</Button>
     </VStack>
 
