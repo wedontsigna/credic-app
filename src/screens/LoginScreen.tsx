@@ -80,7 +80,7 @@ export default function LoginScreen({navigation}: {navigation: any}) {
        borderRadius='full'  
        _text={{color: 'white' }}         
        shadow={2}
-       onPress={() => navigation.navigate('FindScreen')}>         
+       onPress={() => navigation.navigate('DessertScreen')}>         
              Login with Google
           </Button>
     </VStack>

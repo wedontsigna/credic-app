@@ -33,6 +33,7 @@ import SignIn from "./src/screens/SignInScreen";
 import ResetPassword from "./src/screens/ResetPassword";
 import NewPassword from "./src/screens/NewPassword";
 import LoginScreen from "./src/screens/LoginScreen";
+import DessertScreen from './src/screens/DessertScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -86,6 +87,11 @@ const App = () => {
           name="LoginScreen"
           component={LoginScreen}
           options={{ headerShown: false }}
+          />
+          <Stack.Screen
+          name="DessertScreen"
+          component={DessertScreen}
+          options={{ headerShown: true }}
           />
         </Stack.Navigator>
         
