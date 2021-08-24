@@ -35,7 +35,8 @@ import NewPassword from "./src/screens/NewPassword";
 import SendOTP from "./src/screens/SendOTP";
 import FastDelivery  from "./src/screens/FastDelivery";
 import FindFood from "./src/screens/FindFood";
-
+import GoodMorning from "./src/screens/GoodMorning";
+import Slider from './src/screens/Caroussel';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -71,7 +72,7 @@ const App = () => {
           />
           <Stack.Screen
             name="SignIn"
-            component={SignIn}
+            component={Slider}
             options={{ headerShown: false }}
           />
           <Stack.Screen
@@ -98,6 +99,11 @@ const App = () => {
             name="FastDelivery"
             component={FastDelivery}
             options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="GoodMornings"
+            component={GoodMorning}
+            options={{ headerShown: true }}
           />
         </Stack.Navigator>
         

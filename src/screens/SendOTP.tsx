@@ -56,7 +56,7 @@ export default function SendOTP({navigation}: {navigation: any}) {
         </Center>
         <VStack space={2} mt={5}>
           <VStack  space={2}  mt={5}>
-            <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('FindFood')}  _text={{color: 'white' }}>
+            <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('GoodMornings')}  _text={{color: 'white' }}>
                 Send
             </Button>
           </VStack>
