@@ -23,7 +23,8 @@ export default function App({navigation}: {navigation: any}) {
         <Text>Votre plat préféré à votre porte</Text>
       </Box>
       <VStack space={2} mt={5}>
-        <Button
+        <Button 
+          onPress={() => navigation.navigate('LoginScreen')}
           colorScheme="primary"
           _text={{ color: "white" }}
           size="lg"
