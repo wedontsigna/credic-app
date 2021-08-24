@@ -48,7 +48,7 @@ export default function NewPassword({navigation}: {navigation: any}) {
             <Input type="password" borderRadius='full' fontSize="xs" placeholder="Confirm password" bg='#f0f0f0' />
            </FormControl>
           <VStack  space={2}  mt={5}>
-          <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('NewPassword')}  _text={{color: 'white' }}>
+          <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('FindFood')}  _text={{color: 'white' }}>
               Save
           </Button>
           </VStack>

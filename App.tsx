@@ -34,6 +34,12 @@ import ResetPassword from "./src/screens/ResetPassword";
 import NewPassword from "./src/screens/NewPassword";
 import LoginScreen from "./src/screens/LoginScreen";
 import DessertScreen from './src/screens/DessertScreen';
+import LastOffersScreen from "./src/screens/LastOffersScreen";
+import SendOTP from "./src/screens/SendOTP";
+import FastDelivery  from "./src/screens/FastDelivery";
+import FindFood from "./src/screens/FindFood";
+import GoodMorning from "./src/screens/GoodMorning";
+import Slider from './src/screens/Caroussel';
 
 const Stack = createNativeStackNavigator();
 
@@ -92,6 +98,31 @@ const App = () => {
           name="DessertScreen"
           component={DessertScreen}
           options={{ headerShown: true }}
+          />
+          <Stack.Screen
+            name="SendOTP"
+            component={SendOTP}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="FindFood"
+            component={FindFood}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="FastDelivery"
+            component={FastDelivery}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="GoodMornings"
+            component={GoodMorning}
+            options={{ headerShown: true }}
+          />
+          <Stack.Screen
+            name="LastOffersScreen"
+            component={LastOffersScreen}
+            options={{ headerShown: true }}
           />
         </Stack.Navigator>
         
