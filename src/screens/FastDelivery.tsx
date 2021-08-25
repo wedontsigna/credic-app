@@ -40,7 +40,7 @@ export default function FastDelivery({navigation}: {navigation: any}) {
                 fallbackSource={{
                     uri: "https://www.w3schools.com/css/img_lights.jpg",
                 }}
-                />
+            />
         </Center>
         <Center>
             <Heading  color='#333' fontWeight={100} >

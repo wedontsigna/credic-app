@@ -23,8 +23,7 @@ export default function App({navigation}: {navigation: any}) {
         <Text>Votre plat préféré à votre porte</Text>
       </Box>
       <VStack space={2} mt={5}>
-        <Button 
-          onPress={() => navigation.navigate('LoginScreen')}
+        <Button
           colorScheme="primary"
           _text={{ color: "white" }}
           size="lg"
@@ -33,7 +32,7 @@ export default function App({navigation}: {navigation: any}) {
           Se connecter
         </Button>
         <Button
-          onPress={() => navigation.navigate('MySlider')} 
+          onPress={() => navigation.navigate('Detail')} 
           colorScheme="primary"
           _text={{ color: "secondary.500" }}
           variant="rounded"
@@ -44,3 +43,4 @@ export default function App({navigation}: {navigation: any}) {
     </Center>
   );
 }
+>>>>>>> 6867b01ed93fc65b61e7b852912b12871e716fb9

@@ -28,10 +28,14 @@ export default function FindFood({navigation}: {navigation: any}) {
         p={2}
         w="90%"
         mx='auto'
+<<<<<<< HEAD
         h="100vh"
+=======
+        h="100%"
+>>>>>>> 6867b01ed93fc65b61e7b852912b12871e716fb9
       >
         
-        <Center flex={1}>
+        <Center flex={1} h={40}>
             <Image
                 size={150}
                 alt="fallback text"
