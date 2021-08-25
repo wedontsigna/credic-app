@@ -33,7 +33,8 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
           <Text fontSize="xs" >
              Find discounts, Offers special
            </Text>
-           <Button 
+           <Button
+                 onPress={() => navigation.navigate('PaymentDetailsScreen')} 
                 fontSize={'12'}
                 w={'50%'}
                 colorScheme="cyan" 

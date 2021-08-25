@@ -40,6 +40,7 @@ import FastDelivery  from "./src/screens/FastDelivery";
 import FindFood from "./src/screens/FindFood";
 import GoodMorning from "./src/screens/GoodMorning";
 import Slider from './src/screens/Caroussel';
+import PaymentDetailsScreen from './src/screens/PaymentDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -122,6 +123,11 @@ const App = () => {
           <Stack.Screen
             name="LastOffersScreen"
             component={LastOffersScreen}
+            options={{ headerShown: true }}
+          />
+          <Stack.Screen
+            name="PaymentDetailsScreen"
+            component={PaymentDetailsScreen}
             options={{ headerShown: true }}
           />
         </Stack.Navigator>
