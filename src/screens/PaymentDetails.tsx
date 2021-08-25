@@ -20,7 +20,7 @@ import {
   Image,
 } from 'native-base';
 
-export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
+export default function PaymentDetailScreen({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider>
@@ -36,13 +36,12 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
     </Text>
   </Box>
   <Box
-    space={'2'}
     pr={5}
     pl={5}
-    shadow={'9'}
-    shadowOpacity={'1.5'}
-    shadowRadius={'23.0'}
-    shadowOffset={'1'}
+    shadow={9}
+    shadowOpacity={1.5}
+    shadowRadius={23.0}
+    shadowOffset={1}
     shadowOpacity={1.22}
     shadowRadius={67.22}
     elevation={6}
@@ -66,7 +65,7 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
         fontWeight: "bold",
         color: "black",
       }}>
-    <Text bold fontSize='12'>
+    <Text bold fontSize={12}>
       Cash/Card on delivery 
       </Text>
     </Box>
@@ -74,7 +73,7 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
         pt={2}
         width="100%"
         direction={{
-        base: "row",
+        base:"row",
         }}
         pb={3}
         mb={3}
@@ -82,20 +81,18 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
         borderBottomColor='warmGray.400'
         borderColor='transparent'
         justifyContent="space-between">
-    <Text bold fontSize='12'
-          mr={5}
-          mb={'1'}>
-      2341
-      </Text>
+            <Text bold fontSize={12}
+                mr={5}
+                mb={'1'}>
+                    2341
+            </Text>
     <Button
           w={'50%'}
           ml={'5'}
           size='xs'
           variant="outline"
           colorScheme="danger"
-          borderRadius={30}
-          onPress={() => console.log("hello world")}
-        >
+          borderRadius={30}>
           Delete Card
         </Button>
     </Flex>
@@ -103,7 +100,7 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
     <Box
         pb={3}>      
       
-      <Text bold fontSize='12'>
+      <Text bold fontSize={12}>
       Other Methods 
       </Text>
     </Box>
@@ -117,10 +114,11 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
       mt={5}
       colorScheme="orange"
         _text={{
-          color: "white",
-          fontSize:"12",
+          color:"white",
+          fontSize:'12',
           fontWeight:"400"
-        }}>
+        }}
+    onPress={() => navigation.navigate('ProfileScreen')}>
     +  Add Another Credit/Debit Card
     </Button>
   </Box>
@@ -128,6 +126,3 @@ export default function PaymentDetailsScreen({navigation}: {navigation: any}) {
 </NativeBaseProvider>
   );
 }
-
-
-
