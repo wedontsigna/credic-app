@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, Text, StatusBar } from "react-native";
 import { Carousel } from "@fnando/react-native-carousel";
 import FindFood from "./FindFood";
+import { Box } from "native-base";
+import FastDelivery from "./FastDelivery";
+import LiveTracking from "./LiveTracking";
 
 const Indicators = ({
   count,
@@ -52,17 +55,16 @@ const MySlider = () => {
   return (
     <View style={styles.container}>
       <Carousel showsIndicator={false} onPageChange={handlePageChange}>
-        <View style={{ ...styles.page, backgroundColor: "orange" }}>
-         <FindFood />
-        </View>
-
-        <View style={{ ...styles.page, backgroundColor: "gray" }}>
-          <Text>Page 2</Text>
-        </View>
-
-        <View style={{ ...styles.page, backgroundColor: "#4a90e2" }}>
-          <Text>Page 3</Text>
-        </View>
+        <Box h="100vh">
+            <FindFood />
+        </Box>
+        <Box h="100vh">
+            <FastDelivery />
+        </Box>
+        <Box h="100vh">
+            <LiveTracking />
+        </Box>
+       
       </Carousel>
 
       <Indicators count={3} selectedIndex={currentPage} />

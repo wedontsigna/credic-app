@@ -28,6 +28,7 @@ export default function FindFood({navigation}: {navigation: any}) {
         p={2}
         w="90%"
         mx='auto'
+        h="100vh"
       >
         
         <Center flex={1}>
