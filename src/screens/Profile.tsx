@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { VStack, 
     Button, 
-    Text, 
+    Text,
+    Image, 
     Input, 
     Box, 
     Center, 
@@ -20,6 +21,40 @@ export default function ProfileScreen({navigation}: {navigation: any}) {
         w="100%"
         mx='auto'
       >
+    <Box>
+    <Image 
+        size={50}
+        resizeMode={"contain"}
+        borderRadius={100}
+        source={require("../../assets/Dessert1.jpg")} alt="Image de profil" width={'100%'} height={'220'} />
+      
+    </Box>
+    <Box>
+    <Center>
+      <Text bold fontSize='10'
+            color='#ea580c'>
+        Edit profil
+      </Text>
+    </Center>
+    </Box>
+    
+    <Box>
+    <Center>
+      <Text bold fontSize='14'
+            color='#312e81'>
+        Hi there Emilia!
+      </Text>
+    </Center>
+    </Box>
+    
+    <Box>
+    <Center>
+      <Text bold fontSize='10'
+            color='#a8a29e'>
+        Sign Out
+      </Text>
+    </Center>
+    </Box>
   
   <VStack space={2} alignItems="center">
     <Text color='#333' fontSize="3xl">Profile</Text>
