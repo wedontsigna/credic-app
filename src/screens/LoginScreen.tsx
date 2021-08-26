@@ -7,6 +7,7 @@ import { VStack,
     Center, 
     NativeBaseProvider, 
     FormControl } from "native-base";
+import Titre from '../components/shared/Titre';
 
 
 
@@ -22,7 +23,7 @@ export default function LoginScreen({navigation}: {navigation: any}) {
       >
   
   <VStack space={2} alignItems="center">
-    <Text color='#333' fontSize="3xl">Login</Text>
+    <Titre texte="Login" />
     <Text color="muted.400" fontSize="xs">add your delais to login</Text>
   </VStack>
    

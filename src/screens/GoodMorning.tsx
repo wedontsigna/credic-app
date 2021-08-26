@@ -16,7 +16,7 @@ import {
   HStack,
   Divider,
   Center,
-  Select
+  Select,
 } from 'native-base';
 import { BlockImageTitle } from '../components/BlockImageTitle';
 import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizontal';
@@ -24,11 +24,12 @@ import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizont
 export default function GoodMorning({navigation}: {navigation: any}) {
 
  return (
-    <NativeBaseProvider>
+    <NativeBaseProvider bg="#fff">
     <Text fontSize="sm" color="#ccc"  mx={2} my="1">Delivering to</Text>
     <Center mx={2} my="1">
     <Select
       w="100%"
+      border={0}
       border={0}
       accessibilityLabel="Select your favorite programming language"
       placeholder="Select your favorite programming language"
@@ -45,19 +46,11 @@ export default function GoodMorning({navigation}: {navigation: any}) {
       <Select.Item label="Java" value="java" />
     </Select>
   </Center>
- <Center  mx={2} my="1">
-  <Input
-    w="100%"
-   
-    placeholder="Default Input"
-    _light={{
-      placeholderTextColor: "blueGray.400",
-    }}
-    _dark={{
-      placeholderTextColor: "blueGray.50",
-    }}
-  />
- </Center>
+  <Box mx={2}>
+    <FormControl mt={5} >
+      <Input borderRadius='full' fontSize="xs" placeholder="Name" bg='#f0f0f0' />
+    </FormControl>
+  </Box>
   <Box mx={2}>
     <BlockImageTitle />
     <BlockImageTitle />

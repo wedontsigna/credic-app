@@ -41,6 +41,7 @@ import FindFood from "./src/screens/FindFood";
 import GoodMorning from "./src/screens/GoodMorning";
 import Slider from './src/screens/Caroussel';
 import MySlider from "./src/screens/Caroussel";
+import { Detail } from "./src/screens/Detail";
 
 const Stack = createNativeStackNavigator();
 
@@ -73,7 +74,7 @@ const App = () => {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            // options={{ headerShown: false }}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="SignIn"
@@ -130,6 +131,7 @@ const App = () => {
             component={MySlider}
             options={{ headerShown: false }}
           />
+          
         </Stack.Navigator>
         
       </NativeBaseProvider>

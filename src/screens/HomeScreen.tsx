@@ -14,33 +14,26 @@ import {
   HStack,
   Image,
 } from "native-base";
+import Bouton from "../components/shared/Bouton";
+import BoutonBg from "../components/shared/BoutonBg";
 
 export default function App({navigation}: {navigation: any}) {
   return (
-    <Center safeArea flex={1} p={2} w="100%" mx="auto">
-      <Image source={require("../../assets/logo.png")} alt="logo" size="2xl" />
-      <Box style={{ marginBottom: 20 }}>
-        <Text>Votre plat préféré à votre porte</Text>
+    <Box safeArea  p={2} w="100%" mx={0} bg="#fff" flex={1} >
+      <Box h="40vh" w="100%" bg="#53afe3">
+
       </Box>
-      <VStack space={2} mt={5}>
-        <Button
-          colorScheme="primary"
-          _text={{ color: "white" }}
-          size="lg"
-          variant="rounded"
-        >
-          Se connecter
-        </Button>
-        <Button
-          onPress={() => navigation.navigate('Detail')} 
-          colorScheme="primary"
-          _text={{ color: "secondary.500" }}
-          variant="rounded"
-        >
-          Créer un compte
-        </Button>
+      <Center mt={-100} w="50vw" h="50vw" bg="#fff" mx="auto" rounded="full" style={{boxShadow:"-1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset"}}>
+        <Image source={require("../../assets/carre.png")} resizeMode="cover" alt="logo" size="2xl" />
+      </Center>
+      <Center mt={4}>
+        <Text fontFamily="Poppins_400Regular">Votre plat préféré à votre porté</Text>
+      </Center>
+      <VStack space={2} mt="30%" mx={2}>
+          <BoutonBg texte="Se connecter" onPress={() => navigation.navigate('LoginScreen')}  _text={{color: 'white' }} />
+
+          <Bouton texte="S'inscrire" />
       </VStack>
-    </Center>
+    </Box>
   );
 }
->>>>>>> 6867b01ed93fc65b61e7b852912b12871e716fb9
