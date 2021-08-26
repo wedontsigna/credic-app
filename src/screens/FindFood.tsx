@@ -28,9 +28,10 @@ export default function FindFood({navigation}: {navigation: any}) {
         p={2}
         w="90%"
         mx='auto'
+        h="100%"
       >
         
-        <Center flex={1}>
+        <Center flex={1} h={40}>
             <Image
                 size={150}
                 alt="fallback text"

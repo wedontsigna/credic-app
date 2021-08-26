@@ -18,6 +18,8 @@ import {
   Center,
   Select
 } from 'native-base';
+import { BlockImageTitle } from '../components/BlockImageTitle';
+import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizontal';
 
 export default function GoodMorning({navigation}: {navigation: any}) {
 
@@ -56,6 +58,31 @@ export default function GoodMorning({navigation}: {navigation: any}) {
     }}
   />
  </Center>
+  <Box mx={2}>
+    <BlockImageTitle />
+    <BlockImageTitle />
+    <BlockImageTitle />    
+  </Box>
+  <Box>
+    <Text>
+      Most Popular
+    </Text>
+  </Box>
+  <Box>
+    <Text>
+      -------
+    </Text>
+  </Box>
+  <Box>
+    <Text>
+      Article récent
+    </Text>
+  </Box>
+  <Box>
+    <BlockImageTitleHorizontal />
+    <BlockImageTitleHorizontal />
+    <BlockImageTitleHorizontal />
+  </Box>
   </NativeBaseProvider>
   );
 }

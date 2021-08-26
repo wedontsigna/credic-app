@@ -25,7 +25,7 @@ export default function SignIn({navigation}: {navigation: any}) {
         safeArea
         flex={1}
         p={2}
-        w="100%"
+        w="90%"
         mx='auto'
       >
         <Center>
