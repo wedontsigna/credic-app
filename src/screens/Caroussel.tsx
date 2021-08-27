@@ -42,7 +42,7 @@ const Indicators = ({
   );
 };
 
-const MySlider = (props) => {
+const MySlider = (props:any) => {
   // console.log(props);
   const [currentPage, setCurrentPage] = useState(1);
   const handlePageChange = ({

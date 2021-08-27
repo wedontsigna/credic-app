@@ -27,7 +27,7 @@ import OurInputs from '../components/shared/OurInput';
 export default function GoodMorning({navigation}: {navigation: any}) {
 
  return (
-    <NativeBaseProvider bg="#fff">
+    <NativeBaseProvider>
       <Box safeArea  p={2} w="100%" my={5} mx={0} bg="#fff" flex={1}>
         <Box >
           <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>

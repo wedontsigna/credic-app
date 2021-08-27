@@ -39,11 +39,11 @@ export default function LiveTracking({navigation}: {navigation: any}) {
           <Image source={require("../../assets/track.png")} resizeMode="cover" alt="logo" size="2xl" />
         </Center>
         <Center>
-            <Heading  color='#333' textAlign="center" fontWeight={100} >
+            <Heading  color='#333' fontWeight={100} >
               <Titre texte="Suivis en direct" />
             </Heading>
         </Center>
-        <Box mt={5} textAlign="center">
+        <Box mt={5} >
             <Texte texte="Suivis en temps de vos aliments sur application une fois la commande passée" fontSize="xs" />
         </Box>
        

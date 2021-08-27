@@ -31,11 +31,10 @@ export default function FindFood({navigation}: {navigation: any}) {
         p={2}
         w="100%"
         mx='auto'
-        h="100vh"
         bg="#fff"
       >
         
-        <Center flex={0.9} h={40}>
+        <Center flex={1} h={40}>
           <Image source={require("../../assets/fast-food.svg")} resizeMode="cover" alt="logo" size="2xl" />
         </Center>
         <Center>
@@ -43,7 +42,7 @@ export default function FindFood({navigation}: {navigation: any}) {
               <Titre texte=" Trouvez la nourriture que vous aimez" />
             </Heading>
         </Center>
-        <Box mt={5} textAlign="center">
+        <Box mt={5}>
             <Texte texte="Decouvrez les meilleurs aliments de plus de 1000 restaurants et une livraison rapide à votre porte" fontSize="xs" />
         </Box>
        

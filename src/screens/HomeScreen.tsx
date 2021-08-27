@@ -23,7 +23,7 @@ export default function App({navigation}: {navigation: any}) {
       <Box h="40vh" w="100%" bg="#53afe3">
 
       </Box>
-      <Center mt={-100} w="50vw" h="50vw" bg="#fff" mx="auto" rounded="full" style={{boxShadow:"-1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset"}}>
+      <Center mt={-100} w="50vw" h="50vw" bg="#fff" mx="auto" rounded="full" >
         <Image source={require("../../assets/carre.png")} resizeMode="cover" alt="logo" size="2xl" />
       </Center>
       <Center mt={4}>

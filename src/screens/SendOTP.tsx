@@ -35,7 +35,7 @@ export default function SendOTP({navigation}: {navigation: any}) {
          <Heading  color='#333' textAlign="center" fontWeight={100} >
           <Titre texte="Nous avons envoyé un OTP à votre téléphone portable" />
         </Heading>
-        <Box mt={5} textAlign="center">
+        <Box mt={5}>
             <Texte texte="Veuillez verifier numéro de téléphone +241077** ** 26 Continuer de renitialiser le mot de passe" fontSize="xs" />
         </Box>
         <Center my={5}>
