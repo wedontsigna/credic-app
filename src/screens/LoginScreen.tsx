@@ -8,10 +8,14 @@ import { VStack,
     NativeBaseProvider, 
     FormControl } from "native-base";
 import Titre from '../components/shared/Titre';
+import Texte from '../components/shared/Texte';
+import OurInputs from '../components/shared/OurInput';
+import BoutonBg from '../components/shared/BoutonBg';
 
 
 
 export default function LoginScreen({navigation}: {navigation: any}) {
+  console.log(navigation);
   return (
   <NativeBaseProvider>
   <Box
@@ -20,78 +24,65 @@ export default function LoginScreen({navigation}: {navigation: any}) {
         p={2}
         w="100%"
         mx='auto'
+        bg="#fff"
       >
   
-  <VStack space={2} alignItems="center">
-    <Titre texte="Login" />
-    <Text color="muted.400" fontSize="xs">add your delais to login</Text>
+  <VStack space={2} alignItems="center" mt={5}>
+    <Titre texte="Se connecter" />
+    <Texte texte="Entrez vos informations" color="muted.400" fontSize="xs" />
   </VStack>
    
     <VStack space={2}>
-    <FormControl mt={5}>
-      <Input
-        borderRadius='full' 
-        fontSize="xs" 
-        placeholder="Your Email" 
-        bg='#f0f0f0'/>
-    </FormControl>
-
-    <FormControl mt={5}>
-      <Input
-        borderRadius='full' 
-        fontSize="xs" 
-        placeholder="Password" 
-        bg='#f0f0f0'/>
-    </FormControl>
-    </VStack>
-   
-    <VStack space={2} mt={5}>
-     <Button 
-       colorScheme="cyan" 
-       bg="#fc6011" 
-       borderRadius='full'  
-       _text={{color: 'white' }}>         
-         Login </Button>
+      <Box mt={5}>
+        <OurInputs placeholder="Nom" />
+      </Box>
+      <Box mt={5}>
+        <OurInputs placeholder="Prenom " />
+      </Box>
+      <Box mt={5}> 
+        <BoutonBg texte="Se connecter" onPress={() => navigation.navigate('MySlider')} />
+      </Box>
+    
     </VStack>
 
     <Center my={5}>
-        <Text fontSize="xs">Forgot your password?</Text>
+        <Texte texte="Mot de passe oublié ?" onPress={() => navigation.navigate('ResetPassword')} />
     </Center>  
-
     <Center my={5}>
-        <Text fontSize="xs">Or Login with</Text>
-    </Center> 
-     
+        <Texte texte="Ou connectez vous avec ?" />
+    </Center>
+
     <VStack space={1} mt={5}>
-     <Button 
-        w="100%"
-       colorScheme="cyan" 
-       bg="blue.800"
-       borderRadius='full'  
-       _text={{color: 'white' }}         
-       shadow={2}
-       onPress={() => navigation.navigate('LastOffersScreen')}>         
-             Login with Facebook</Button>
+      <Button 
+      onPress={() => navigation.navigate('Menu')}
+          w="100%"
+        colorScheme="cyan" 
+        bg="#1877f2"
+        borderRadius='full'  
+        _text={{color: 'white' }}         
+        shadow={2}
+       >         
+        Se connecter avec facebook</Button>
     </VStack>
 
     <VStack space={1} mt={5}>
      <Button 
        w="100%"
        colorScheme="danger"
-       bg="#dc2626"
+       bg="#cf3f32"
        borderRadius='full'  
        _text={{color: 'white' }}         
        shadow={2}
-       onPress={() => navigation.navigate('DessertScreen')}>         
-             Login with Google
+       onPress={() => navigation.navigate('DessertScreen')}
+       >         
+             Se connecter avec Google
           </Button>
     </VStack>
        
 
     <Center mt={5}>
-       <Text fontSize="xs">
-          Don't have An Accoint? <Text bold color='orange.700' fontSize="xs" onPress={() => navigation.navigate('FindFoodScreen')}>Sign Up</Text>
-      </Text>       
+        <Texte texte={<>Vous n'avez pas de compte ? <Text color="#ff0000" onPress={() => navigation.navigate('SignIn')}>S'inscrire</Text></>} />
+              
     </Center>
     </Box>
     </NativeBaseProvider>

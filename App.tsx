@@ -1,9 +1,23 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NativeBaseProvider } from "native-base";
+import { Box, NativeBaseProvider,
+  Text,
+  Heading,
+  VStack,
+  FormControl,
+  Input,
+  Link,
+  Button,
+  Icon,
+  HStack,
+  Center,
+  Pressable,
+} from "native-base";
+import { MaterialCommunityIcons , MaterialIcons} from '@expo/vector-icons';
+
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -42,6 +56,7 @@ import GoodMorning from "./src/screens/GoodMorning";
 import Slider from './src/screens/Caroussel';
 import MySlider from "./src/screens/Caroussel";
 import { Detail } from "./src/screens/Detail";
+import Menu from "./src/screens/Menu";
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +81,8 @@ const App = () => {
     Poppins_900Black,
     Poppins_900Black_Italic,
   });
+
+  const [selected, setSelected] = React.useState(1);
 
   return (
     <NavigationContainer>
@@ -117,9 +134,9 @@ const App = () => {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="GoodMornings"
+            name="GoodMorning"
             component={GoodMorning}
-            options={{ headerShown: true }}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="LastOffersScreen"
@@ -131,8 +148,91 @@ const App = () => {
             component={MySlider}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Menu"
+            component={Menu}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Detail"
+            component={Detail}
+            options={{ headerShown: false }}
+          />
           
         </Stack.Navigator>
+
+        {/* <HStack bg="#fff" alignItems="center" safeAreaBottom shadow={9}>
+          <Pressable
+            cursor="pointer"
+            opacity={selected === 0 ? 1 : 0.5}
+            py={2}
+            flex={1}
+            onPress={() => setSelected(0)}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialCommunityIcons name="heart" />}
+                color="#333"
+                size="xs"
+              />
+              <Text color="#333" fontSize={14}>Favorites</Text>
+            </Center>
+          </Pressable>
+          <Pressable
+            cursor="pointer"
+            opacity={selected === 1 ? 1 : 0.5}
+            py={2}
+            flex={1}
+            onPress={() => setSelected(1)}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialCommunityIcons name="music-note" />}
+                color="#333"
+                size="xs"
+              />
+
+              <Text color="#333" fontSize={14}>Music</Text>
+            </Center>
+          </Pressable>
+          <Pressable
+            cursor="pointer"
+            opacity={selected === 2 ? 1 : 0.6}
+            py={2}
+            flex={1}
+            onPress={() => setSelected(2)}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialIcons name="location-pin" />}
+                color="#333"
+                size="xs"
+              />
+
+              <Text color="#333" fontSize={14}>Places</Text>
+            </Center>
+          </Pressable>
+          <Pressable
+            cursor="pointer"
+            opacity={selected === 3 ? 1 : 0.5}
+            py={2}
+            flex={1}
+            onPress={() => setSelected(3)}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialCommunityIcons name="newspaper" />}
+                color="#333"
+                size="xs"
+              />
+              <Text color="#333" fontSize={14}>News</Text>
+            </Center>
+          </Pressable>
+        </HStack> */}
         
       </NativeBaseProvider>
     </NavigationContainer>

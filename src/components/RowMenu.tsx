@@ -11,10 +11,10 @@ import {Box,
     NativeBaseProvider} from "native-base"
 
 export function RowMenu(props) {
-
-    console.log(props);
+  console.log(props);
   return (
     <HStack 
+    
     alignItems="center" 
     space={4} 
     justifyContent="space-between" 
@@ -24,11 +24,12 @@ export function RowMenu(props) {
     position="absolute"
     right={0}
     top={props.MyTop}
+   
     m={2} w="98vw" mx={2} my={4}>
-        <HStack alignItems="center" h="80px" 
+        <HStack alignItems="center" h="80px"
         position="absolute"
         left="40px" top="20px" zIndex="99" w="25%">
-        <Box  w="80px"
+        <Box onPress={props.onPress}  w="80px"
             h="80px" rounded="full" >
           <AspectRatio ratio={16 / 9}>
             <Image
@@ -46,9 +47,9 @@ export function RowMenu(props) {
       </Box>
     </HStack>
         <HStack bg="#fafafa"borderTopLeftRadius="50px" borderBottomLeftRadius="50px"  alignItems="center" h="80px" w="85%" shadow={6}>
-            <Box w="100%" size="md" h="100%">
-                <Text p={5} bold={true} fontSize={18} my={3}>
-                    The Garden City
+            <Box w="100%" size="md" h="100%"  >
+                <Text p={5} bold={true} fontSize={18} mx={5} my={3}>
+                    {props.texte}
                 </Text>
             </Box>
         </HStack>

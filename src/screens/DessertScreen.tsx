@@ -17,6 +17,8 @@ import {
   Center,
   Image,
 } from 'native-base';
+import OurInputs from '../components/shared/OurInput';
+import Titre from '../components/shared/Titre';
 
 export default function DessertScreen({navigation}: {navigation: any}) {
 
@@ -27,16 +29,19 @@ export default function DessertScreen({navigation}: {navigation: any}) {
         flex={1}
         p={2}
         w="100%"
+        bg="#fff"
       >
-        
+        <Heading  color='#333' textAlign="center" fontWeight={100} >
+              <Titre texte="Desserts" />
+        </Heading>
+
         <VStack space={2} mt={0}>
-          <FormControl mt={0}>
-            <Input type="text" borderRadius='full' fontSize="xs" placeholder="Seach Food" bg='#f0f0f0' />
-           </FormControl>
+          <OurInputs placeholder="Recherche de la nourriture" />
         </VStack>
          
         
-            <Box shadow={2}
+            <Box shadow={2} 
+              onPress={() => navigation.navigate('Detail')}
                 mt={"5"}
                 w='100%'>
         <Image source={require("../../assets/Dessert1.jpg")} alt="logo" width={'100%'} height={'220'} />
@@ -49,6 +54,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             </Box>
 
             <Box shadow={2}
+              onPress={() => navigation.navigate('Detail')}
                 mt={"1"}
                 w='100%'>
         <Image source={require("../../assets/Food8.jpg")} alt="logo" width={'100%'} height={'220'} />
@@ -61,6 +67,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             </Box>
 
             <Box shadow={2}
+            onPress={() => navigation.navigate('Detail')}
                 mt={"1"}
                 w='100%'>
         <Image source={require("../../assets/Dessert3.jpg")} alt="logo" width={'100%'} height={'220'} />
@@ -73,6 +80,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             </Box>
 
             <Box shadow={2}
+            onPress={() => navigation.navigate('Detail')}
                 mt={"1"}
                 w='100%'>
         <Image source={require("../../assets/Dessert4.jpg")} alt="logo" width={'100%'} height={'220'} />

@@ -32,7 +32,7 @@ export default function App({navigation}: {navigation: any}) {
       <VStack space={2} mt="30%" mx={2}>
           <BoutonBg texte="Se connecter" onPress={() => navigation.navigate('LoginScreen')}  _text={{color: 'white' }} />
 
-          <Bouton texte="S'inscrire" />
+          <Bouton texte="S'inscrire" onPress={() => navigation.navigate('SignIn')} />
       </VStack>
     </Box>
   );

@@ -29,7 +29,7 @@ export function BlockImageTitleHorizontal() {
     </HStack>
         <HStack alignItems="center" w="63%">
           <Box w="100%">
-            <Heading size="md" w='100%' ml={-1}>
+            <Heading size="sm" w='100%' fontFamily="Poppins_700Bold" ml={-1}>
               The Garden City
               <Box w="100%">
                 <Heading

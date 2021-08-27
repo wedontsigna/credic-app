@@ -42,8 +42,9 @@ const Indicators = ({
   );
 };
 
-const MySlider = () => {
-  const [currentPage, setCurrentPage] = useState(0);
+const MySlider = (props) => {
+  // console.log(props);
+  const [currentPage, setCurrentPage] = useState(1);
   const handlePageChange = ({
     currentPage: newCurrentPage,
   }: {
@@ -56,13 +57,13 @@ const MySlider = () => {
     <View style={styles.container}>
       <Carousel showsIndicator={false} onPageChange={handlePageChange}>
           <Box h="100vh">
-            <FindFood />
+            <FindFood navigation={props.navigation} />
           </Box>
           <Box h="100vh">
-            <FastDelivery />
+            <FastDelivery navigation={props.navigation} />
           </Box>
           <Box h="100vh">
-            <LiveTracking />
+            <LiveTracking navigation={props.navigation} />
           </Box>
       </Carousel>
 
@@ -89,6 +90,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    display:"none"
   },
 
   indicators: {

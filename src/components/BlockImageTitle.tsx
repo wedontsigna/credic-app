@@ -15,14 +15,13 @@ export const BlockImageTitle = () => {
   return (
     <Box
       width="100%"
-      shadow={1}
       _light={{
         backgroundColor: "gray.50",
       }}
       _dark={{
         backgroundColor: "gray.700",
       }}
-      my={4}
+      my={5}
     >
       <Box>
         <AspectRatio ratio={16 / 9}>
@@ -35,9 +34,10 @@ export const BlockImageTitle = () => {
           />
         </AspectRatio>
       </Box>
+
       <Stack p={4} space={2}>
         <Stack space={2}>
-          <Heading size="md" ml={-1}>
+          <Heading size="sm" fontFamily="Poppins_700Bold" ml={-1}>
             The Garden City
           </Heading>
           <Heading

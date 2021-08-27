@@ -16,6 +16,10 @@ import {
   Divider,
   Center
 } from 'native-base';
+import Titre from '../components/shared/Titre';
+import Texte from '../components/shared/Texte';
+import OurInputs from '../components/shared/OurInput';
+import BoutonBg from '../components/shared/BoutonBg';
 
 export default function ResetPassword({navigation}: {navigation: any}) {
 
@@ -28,29 +32,22 @@ export default function ResetPassword({navigation}: {navigation: any}) {
         w="90%"
         mx='auto'
       >
-        <Center>
-            <Heading  color='#333' fontWeight={100} >
-               Reset your password 
-            </Heading>
-        </Center>
-        <Center>
-            <Heading color="muted.400" fontWeight={100} size="xs" textAlign="center">
-            Plaese enter your email adresse to create a new password via email
-            </Heading>
-        </Center>
         
-
-        <VStack space={2} mt={5}>
-          <FormControl mt={5}>
-            <Input type="email" borderRadius='full' fontSize="xs" placeholder="Email" bg='#f0f0f0' />
-           </FormControl>
+        <Heading  color='#333' textAlign="center" fontWeight={100} >
+          <Titre texte="Renitialiser le mot de passe" />
+        </Heading>
+        <Box mt={5}>
+          <Texte texte="Veuillez entrer votre email pour recevoir un lien pour créer un nouveau mot de passe" color="muted.400" fontSize="xs" />
+        </Box>
+        
+        <VStack>
+         <Box mt={5}>
+            <OurInputs placeholder="email" />
+         </Box>
+         <Box mt={5}>
+            <BoutonBg texte="Envoyer" placeholder="Email" onPress={() => navigation.navigate('SendOTP')}/>
+         </Box>
          
-          <VStack  space={2}  mt={5}>
-          <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('NewPassword')}  _text={{color: 'white' }}>
-              Send
-          </Button>
-          </VStack>
-          
         </VStack>
       </Box>
     </NativeBaseProvider>

@@ -16,6 +16,10 @@ import {
   Divider,
   Center
 } from 'native-base';
+import Titre from '../components/shared/Titre';
+import Texte from '../components/shared/Texte';
+import OurInputs from '../components/shared/OurInput';
+import BoutonBg from '../components/shared/BoutonBg';
 
 export default function NewPassword({navigation}: {navigation: any}) {
 
@@ -25,32 +29,29 @@ export default function NewPassword({navigation}: {navigation: any}) {
         safeArea
         flex={1}
         p={2}
-        w="90%"
+        w="100%"
         mx='auto'
+        bg="#fff"
       >
-        <Center>
-            <Heading  color='#333' fontWeight={100} >
-              New password 
-            </Heading>
-        </Center>
-        <Center>
-            <Heading color="muted.400" fontWeight={100} size="xs" textAlign="center">
-            Plaese enter your email adresse to create a new password via email
-            </Heading>
-        </Center>
+        <Heading  color='#333' textAlign="center" fontWeight={100} >
+          <Titre texte="Nouveau mot de passe" />
+        </Heading>
+        <Box mt={5}>
+          <Center>
+          <Texte texte="Veuillez entrer votre nouveau mot de passe"  fontSize="xs" />
+          </Center>
+        </Box>
         
-
         <VStack space={2} mt={5}>
-          <FormControl mt={5}>
-            <Input type="password" borderRadius='full' fontSize="xs" placeholder="New password" bg='#f0f0f0' />
-           </FormControl>
-           <FormControl mt={5}>
-            <Input type="password" borderRadius='full' fontSize="xs" placeholder="Confirm password" bg='#f0f0f0' />
-           </FormControl>
+            <Box mt={5}>
+                <OurInputs placeholder="Nouveau mot de passe" />
+            </Box>
+            <Box mt={5}>
+                <OurInputs placeholder="Confirmer nouveau mot de passe" />
+            </Box>
+            
           <VStack  space={2}  mt={5}>
-          <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('FindFood')}  _text={{color: 'white' }}>
-              Save
-          </Button>
+            <BoutonBg texte="Suivant" onPress={() => navigation.navigate('MySlider')}/>
           </VStack>
           
         </VStack>

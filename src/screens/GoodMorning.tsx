@@ -15,67 +15,50 @@ import {
   IconButton,
   HStack,
   Divider,
+  ChevronDownIcon ,
   Center,
   Select,
 } from 'native-base';
 import { BlockImageTitle } from '../components/BlockImageTitle';
 import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizontal';
+import Texte from '../components/shared/Texte';
+import OurInputs from '../components/shared/OurInput';
 
 export default function GoodMorning({navigation}: {navigation: any}) {
 
  return (
     <NativeBaseProvider bg="#fff">
-    <Text fontSize="sm" color="#ccc"  mx={2} my="1">Delivering to</Text>
-    <Center mx={2} my="1">
-    <Select
-      w="100%"
-      border={0}
-      border={0}
-      accessibilityLabel="Select your favorite programming language"
-      placeholder="Select your favorite programming language"
-      onValueChange={(itemValue) => setLanguage(itemValue)}
-      _selectedItem={{
-        bg: "cyan.600",
-        endIcon: <CheckIcon size={4} />,
-      }}
-    >
-      <Select.Item label="JavaScript" value="js" />
-      <Select.Item label="TypeScript" value="ts" />
-      <Select.Item label="C" value="c" />
-      <Select.Item label="Python" value="py" />
-      <Select.Item label="Java" value="java" />
-    </Select>
-  </Center>
-  <Box mx={2}>
-    <FormControl mt={5} >
-      <Input borderRadius='full' fontSize="xs" placeholder="Name" bg='#f0f0f0' />
-    </FormControl>
-  </Box>
-  <Box mx={2}>
-    <BlockImageTitle />
-    <BlockImageTitle />
-    <BlockImageTitle />    
-  </Box>
-  <Box>
-    <Text>
-      Most Popular
-    </Text>
-  </Box>
-  <Box>
-    <Text>
-      -------
-    </Text>
-  </Box>
-  <Box>
-    <Text>
-      Article récent
-    </Text>
-  </Box>
-  <Box>
-    <BlockImageTitleHorizontal />
-    <BlockImageTitleHorizontal />
-    <BlockImageTitleHorizontal />
-  </Box>
+      <Box safeArea  p={2} w="100%" my={5} mx={0} bg="#fff" flex={1}>
+        <Box >
+          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>
+        </Box>
+        <Box mt={5}>
+          <Texte texte="Livraison à "  mx={2} my="1" />
+        </Box>
+        <Box mt={5} >
+          <Text fontWeight="600">{<>Localisation actuelle <ChevronDownIcon  color="#ff0000" position="absolute" /></> }</Text>
+        </Box>
+        <Box mt={5}>
+          <OurInputs placeholder="Search" />
+        </Box>
+        <Box  mt={5}>
+          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Restaurant Populaire</> }</Text>
+        </Box>
+        <Box>
+          <BlockImageTitle />
+          <BlockImageTitle />
+          <BlockImageTitle />    
+        </Box>
+        <Box  mt={5}>
+          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Articles récents</> }</Text>
+        </Box>
+
+        <Box>
+          <BlockImageTitleHorizontal />
+          <BlockImageTitleHorizontal />
+          <BlockImageTitleHorizontal />
+        </Box>
+      </Box>
   </NativeBaseProvider>
   );
 }

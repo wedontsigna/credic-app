@@ -17,6 +17,9 @@ import {
   Center,
   Image
 } from 'native-base';
+import Titre from '../components/shared/Titre';
+import BoutonBg from '../components/shared/BoutonBg';
+import Texte from '../components/shared/Texte';
 
 export default function LiveTracking({navigation}: {navigation: any}) {
 
@@ -26,37 +29,28 @@ export default function LiveTracking({navigation}: {navigation: any}) {
         safeArea
         flex={1}
         p={2}
-        w="90%"
+        w="100%"
         mx='auto'
+        h="100vh"
+        bg="#fff"
       >
         
-        <Center flex={1}>
-            <Image
-                size={150}
-                alt="fallback text"
-                source={{
-                    uri: "https://-page-icon.png", // uri: 'https://wallpaperaccess.com/full/317501.jpg',
-                }}
-                fallbackSource={{
-                    uri: "https://www.w3schools.com/css/img_lights.jpg",
-                }}
-                />
+        <Center flex={0.9} h={40}>
+          <Image source={require("../../assets/track.png")} resizeMode="cover" alt="logo" size="2xl" />
         </Center>
         <Center>
-            <Heading  color='#333' fontWeight={100} >
-              Live tracking
+            <Heading  color='#333' textAlign="center" fontWeight={100} >
+              <Titre texte="Suivis en direct" />
             </Heading>
         </Center>
-        <Center>
-            <Heading color="muted.400" fontWeight={100} size="xs" textAlign="center">
-            Real time tracking of your food on the app once you placed the order
-            </Heading>
-        </Center>
+        <Box mt={5} textAlign="center">
+            <Texte texte="Suivis en temps de vos aliments sur application une fois la commande passée" fontSize="xs" />
+        </Box>
+       
         <VStack space={2} mt={5}>
           <VStack  space={2}  mt={5}>
-          <Button colorScheme="cyan" bg="#fc6011" borderRadius='full' onPress={() => navigation.navigate('FastDelivery')}  _text={{color: 'white' }}>
-              Next
-          </Button>
+            <BoutonBg texte="Next" onPress={() => navigation.navigate('GoodMorning')}/>
+          
           </VStack>
           
         </VStack>

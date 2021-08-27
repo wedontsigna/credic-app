@@ -7,6 +7,7 @@ export default function Bouton(props) {
     style={{backgroundColor:"#fff",border:"2px solid #ef7914"}}
     _text={{ color: "#ef7914" }}
     size="lg"
-    variant="rounded" >{props.texte}</Button>
+    borderRadius="full"
+    variant="rounded" onPress={props.onPress}>{props.texte}</Button>
   )
 }
