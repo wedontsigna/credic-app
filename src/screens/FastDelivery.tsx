@@ -43,7 +43,7 @@ export default function FastDelivery({navigation}: {navigation: any}) {
               <Titre texte="Livraison rapide" />
             </Heading>
         </Center>
-        <Box mt={5} textAlign="center">
+        <Box mt={5}>
             <Texte texte="Livraison de restauration rapide à domicile,au bureau ou  que vous soyez" fontSize="xs" />
         </Box>
        

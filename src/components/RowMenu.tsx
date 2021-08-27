@@ -10,7 +10,7 @@ import {Box,
     Stack,
     NativeBaseProvider} from "native-base"
 
-export function RowMenu(props) {
+export function RowMenu(props:any) {
   console.log(props);
   return (
     <HStack 
@@ -28,8 +28,8 @@ export function RowMenu(props) {
     m={2} w="98vw" mx={2} my={4}>
         <HStack alignItems="center" h="80px"
         position="absolute"
-        left="40px" top="20px" zIndex="99" w="25%">
-        <Box onPress={props.onPress}  w="80px"
+        left="40px" top="20px" zIndex={99} w="25%">
+        <Box   w="80px"
             h="80px" rounded="full" >
           <AspectRatio ratio={16 / 9}>
             <Image
