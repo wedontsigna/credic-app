@@ -12,7 +12,7 @@ import {
   NativeBaseProvider,
 } from "native-base"
 import { MaterialIcons, Ionicons } from "@expo/vector-icons"
-import { AccordionExample } from "../components/AccordionExample"
+
 export const Detail = () => {
   return (
     <Box
@@ -82,7 +82,6 @@ export const Detail = () => {
             >
                 The Silicon Valley of India.
             </Heading>
-            <AccordionExample />
       </Stack>
     </Box>
   )
