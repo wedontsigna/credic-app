@@ -14,6 +14,7 @@ import {
   IconButton,
   HStack,
   Divider,
+  ScrollView,
   Center
 } from 'native-base';
 import Titre from '../components/shared/Titre';
@@ -25,27 +26,28 @@ export default function SignIn({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider>
-      <Box
+      <ScrollView
         safeArea
         px={2}
         flex={1}
         w="100%"
         mx='auto'
         bg="#fff"
+        mt={5}
       >
         <Heading  color='#333' textAlign="center" fontWeight={100} mt={5} >
           <Titre texte="S'inscrire" />
         </Heading>
-        <Box mt={5}>
-          <Texte texte="Ajoutez vos coordonnées pour vous inscrire"  fontSize="xs" />
-        </Box>
+        <Center mt={5}>
+          <Texte texte="Ajoutez vos coordonnées pour vous inscrire" textAlign="center" />
+        </Center>
         
         <VStack space={2} mt={5}>
           <Box mt={5}>
             <OurInputs placeholder="Nom" />
           </Box>
           <Box mt={5}>
-            <OurInputs placeholder="Email" />
+            <OurInputs type="email" placeholder="Email" />
           </Box>
           <Box mt={5}>
             <OurInputs placeholder="Phone N°" />
@@ -54,14 +56,14 @@ export default function SignIn({navigation}: {navigation: any}) {
             <OurInputs placeholder="Adresse" />
           </Box>
           <Box mt={5}>
-            <OurInputs placeholder="Password" />
+            <OurInputs type="password" placeholder="Password" />
           </Box>
           <Box mt={5}>
-            <OurInputs placeholder="Confirmer password" />
+            <OurInputs type="password" placeholder="Confirmer password" />
           </Box>
           <VStack  space={2}  mt={5}>
             <Box mt={5}>
-              <BoutonBg texte="S'inscrire" />
+              <BoutonBg  texte="S'inscrire" />
             </Box>
           </VStack>
           <Center my={5}>
@@ -69,7 +71,7 @@ export default function SignIn({navigation}: {navigation: any}) {
           </Center>
           
         </VStack>
-      </Box>
+      </ScrollView>
     </NativeBaseProvider>
   );
 }

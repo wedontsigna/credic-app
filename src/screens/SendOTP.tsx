@@ -35,29 +35,29 @@ export default function SendOTP({navigation}: {navigation: any}) {
          <Heading  color='#333' textAlign="center" fontWeight={100} >
           <Titre texte="Nous avons envoyé un OTP à votre téléphone portable" />
         </Heading>
-        <Box mt={5}>
-            <Texte texte="Veuillez verifier numéro de téléphone +241077** ** 26 Continuer de renitialiser le mot de passe" fontSize="xs" />
-        </Box>
+        <Center mt={5} >
+            <Texte textAlign="center" texte="Veuillez verifier numéro de téléphone +241077** ** 26 Continuer de renitialiser le mot de passe" />
+        </Center>
         <Center my={5}>
             <HStack space={1} >
-                <Center w="40px" h="40px" >
-                    <Input placeholder="*" w="100%"/>
+                <Center  w="60px" h="60px" >
+                    <Input placeholder="*" textAlign="center" fontSize="lg" w="100%" h="100%"/>
                 </Center>
-                <Center w="40px" h="40px" >
-                    <Input placeholder="*" w="100%"/>
+                <Center w="60px" h="60px" >
+                    <Input placeholder="*" textAlign="center" fontSize="lg" w="100%" h="100%" />
                 </Center>
-                <Center w="40px" h="40px" >
-                    <Input placeholder="*" w="100%"/>
+                <Center w="60px" h="60px" >
+                    <Input placeholder="*" textAlign="center" fontSize="lg" w="100%" h="100%"/>
                 </Center>
-                <Center w="40px" h="40px" >
-                    <Input placeholder="*" fontSize={14} w="100%"/>
+                <Center  w="60px" h="60px" >
+                    <Input placeholder="*" textAlign="center" fontSize="lg" w="100%" h="100%"/>
                 </Center>
             </HStack>
         </Center>
         <VStack space={2} mt={5}>
           <VStack  space={2}  mt={5}>
             <Box mt={5}>
-                <BoutonBg texte="Envoyer" placeholder="Email" onPress={() => navigation.navigate('ResetPassword')}/>
+                <BoutonBg texte="Envoyer" placeholder="Email" onPress={() => navigation.navigate('NewPassword')}/>
             </Box>
           </VStack>
         </VStack>

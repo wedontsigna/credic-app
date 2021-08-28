@@ -29,7 +29,7 @@ export default function ResetPassword({navigation}: {navigation: any}) {
         safeArea
         flex={1}
         p={2}
-        w="90%"
+        w="100%"
         mx='auto'
       >
         
@@ -37,7 +37,7 @@ export default function ResetPassword({navigation}: {navigation: any}) {
           <Titre texte="Renitialiser le mot de passe" />
         </Heading>
         <Box mt={5}>
-          <Texte texte="Veuillez entrer votre email pour recevoir un lien pour créer un nouveau mot de passe" color="muted.400" fontSize="xs" />
+          <Texte textAlign="center" texte="Veuillez entrer votre email pour recevoir un lien pour créer un nouveau mot de passe" color="muted.400" fontSize="xs" />
         </Box>
         
         <VStack>

@@ -7,7 +7,9 @@ export default function OurInputs(props:any) {
      
         <Input
             borderRadius='full' 
-            fontSize="xs" 
+            fontSize="lg" 
+            type={props.type}
+            fontFamily="Poppins_300Light"
             placeholder={props.placeholder} 
             bg='#e8e8e8' />
             

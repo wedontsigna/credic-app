@@ -18,6 +18,24 @@ import { Box, NativeBaseProvider,
 } from "native-base";
 import { MaterialCommunityIcons , MaterialIcons} from '@expo/vector-icons';
 
+
+// Screen
+import SignIn from "./src/screens/SignInScreen";
+import ResetPassword from "./src/screens/ResetPassword";
+import NewPassword from "./src/screens/NewPassword";
+import LoginScreen from "./src/screens/LoginScreen";
+import DessertScreen from './src/screens/DessertScreen';
+import LastOffersScreen from "./src/screens/LastOffersScreen";
+import SendOTP from "./src/screens/SendOTP";
+import FastDelivery  from "./src/screens/FastDelivery";
+import FindFood from "./src/screens/FindFood";
+import GoodMorning from "./src/screens/GoodMorning";
+import Slider from './src/screens/Caroussel';
+import MySlider from "./src/screens/Caroussel";
+import { Detail } from "./src/screens/Detail";
+import Menu from "./src/screens/Menu";
+// fin Screen--------------------
+
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -40,27 +58,14 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from "@expo-google-fonts/poppins";
-
 import HomeScreen from "./src/screens/HomeScreen";
 import theme from "./theme";
-import SignIn from "./src/screens/SignInScreen";
-import ResetPassword from "./src/screens/ResetPassword";
-import NewPassword from "./src/screens/NewPassword";
-import LoginScreen from "./src/screens/LoginScreen";
-import DessertScreen from './src/screens/DessertScreen';
-import LastOffersScreen from "./src/screens/LastOffersScreen";
-import SendOTP from "./src/screens/SendOTP";
-import FastDelivery  from "./src/screens/FastDelivery";
-import FindFood from "./src/screens/FindFood";
-import GoodMorning from "./src/screens/GoodMorning";
-import Slider from './src/screens/Caroussel';
-import MySlider from "./src/screens/Caroussel";
-import { Detail } from "./src/screens/Detail";
-import Menu from "./src/screens/Menu";
 
 const Stack = createNativeStackNavigator();
 
-const App = () => {
+
+const App=() =>{
+
   let [fontsLoaded] = useFonts({
     Poppins_100Thin,
     Poppins_100Thin_Italic,
@@ -82,38 +87,39 @@ const App = () => {
     Poppins_900Black_Italic,
   });
 
-  const [selected, setSelected] = React.useState(1);
-
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
   return (
     <NavigationContainer>
       <NativeBaseProvider theme={theme}>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
+          <Stack.Navigator>
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="SignIn"
+              component={SignIn}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="ResetPassword"
+              component={ResetPassword}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="NewPassword"
+              component={NewPassword}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+            name="LoginScreen"
+            component={LoginScreen}
             options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="SignIn"
-            component={SignIn}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="ResetPassword"
-            component={ResetPassword}
-            options={{ headerShown: false }}
-          />
-           <Stack.Screen
-            name="NewPassword"
-            component={NewPassword}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-          name="LoginScreen"
-          component={LoginScreen}
-          options={{ headerShown: false }}
-          />
-          <Stack.Screen
+            />
+            <Stack.Screen
           name="DessertScreen"
           component={DessertScreen}
           options={{ headerShown: true }}
@@ -157,95 +163,11 @@ const App = () => {
             name="Detail"
             component={Detail}
             options={{ headerShown: false }}
-          />
-          
-        </Stack.Navigator>
-
-        {/* <HStack bg="#fff" alignItems="center" safeAreaBottom shadow={9}>
-          <Pressable
-            cursor="pointer"
-            opacity={selected === 0 ? 1 : 0.5}
-            py={2}
-            flex={1}
-            onPress={() => setSelected(0)}
-          >
-            <Center>
-              <Icon
-                mb={1}
-                as={<MaterialCommunityIcons name="heart" />}
-                color="#333"
-                size="xs"
-              />
-              <Text color="#333" fontSize={14}>Favorites</Text>
-            </Center>
-          </Pressable>
-          <Pressable
-            cursor="pointer"
-            opacity={selected === 1 ? 1 : 0.5}
-            py={2}
-            flex={1}
-            onPress={() => setSelected(1)}
-          >
-            <Center>
-              <Icon
-                mb={1}
-                as={<MaterialCommunityIcons name="music-note" />}
-                color="#333"
-                size="xs"
-              />
-
-              <Text color="#333" fontSize={14}>Music</Text>
-            </Center>
-          </Pressable>
-          <Pressable
-            cursor="pointer"
-            opacity={selected === 2 ? 1 : 0.6}
-            py={2}
-            flex={1}
-            onPress={() => setSelected(2)}
-          >
-            <Center>
-              <Icon
-                mb={1}
-                as={<MaterialIcons name="location-pin" />}
-                color="#333"
-                size="xs"
-              />
-
-              <Text color="#333" fontSize={14}>Places</Text>
-            </Center>
-          </Pressable>
-          <Pressable
-            cursor="pointer"
-            opacity={selected === 3 ? 1 : 0.5}
-            py={2}
-            flex={1}
-            onPress={() => setSelected(3)}
-          >
-            <Center>
-              <Icon
-                mb={1}
-                as={<MaterialCommunityIcons name="newspaper" />}
-                color="#333"
-                size="xs"
-              />
-              <Text color="#333" fontSize={14}>News</Text>
-            </Center>
-          </Pressable>
-        </HStack> */}
-        
-      </NativeBaseProvider>
-    </NavigationContainer>
+          /> 
+          </Stack.Navigator>
+        </NativeBaseProvider>
+      </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
-
+}
+}
 export default App;

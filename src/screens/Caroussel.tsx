@@ -1,119 +1,69 @@
-import { range } from "lodash";
-import React, { useState } from "react";
-import { SafeAreaView, StyleSheet, View, Text, StatusBar } from "react-native";
-import {Box} from 'native-base';
-import { Carousel } from "@fnando/react-native-carousel";
-import FindFood from "./FindFood";
-import FastDelivery from "./FastDelivery";
-import LiveTracking from "./LiveTracking";
+import { Button } from 'native-base'
+import React from 'react'
+import { View } from "react-native"
+import Carousel , { Pagination } from 'react-native-snap-carousel'
+import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from '../components/shared/CarouselCardItem'
+import FastDelivery from './FastDelivery'
+import FindFood from './FindFood'
+import LiveTracking from './LiveTracking'
 
-const Indicators = ({
-  count,
-  selectedIndex,
-}: {
-  count: number;
-  selectedIndex: number;
-}) => {
-  const children = range(count).map((index: number) => {
-    const selected = index === selectedIndex;
 
-    return (
-      <View
-        key={index}
-        style={{
-          ...styles.indicator,
-          backgroundColor: selected ? "#000" : "#ffffff80",
-        }}>
-        <Text
-          style={{
-            ...styles.indicatorText,
-            color: selected ? "#fff" : "#00000090",
-          }}>
-          {index + 1}
-        </Text>
-      </View>
-    );
-  });
+const CarouselCards = (props:any) => {
+  const data = [
+    {
+      title: "Find Food",
+      body: <FindFood navigation={props.navigation}/>,
+    },
+    {
+      title: "Fast delivery",
+      body: <FastDelivery navigation={props.navigation}/>,
+    },
+    {
+      title: "Lorem Ipsum",
+      body: <LiveTracking navigation={props.navigation}/>,
+    }];
+
+    const [index, setIndex] = React.useState(0)
+
+  const isCarousel = React.useRef(null)
+
+  const wedo=()=>{
+    setIndex(2)
+  }
+
 
   return (
-    <SafeAreaView style={styles.indicatorsSafeArea}>
-      <View style={styles.indicators}>{children}</View>
-    </SafeAreaView>
-  );
-};
-
-const MySlider = (props:any) => {
-  // console.log(props);
-  const [currentPage, setCurrentPage] = useState(1);
-  const handlePageChange = ({
-    currentPage: newCurrentPage,
-  }: {
-    currentPage: number;
-  }) => {
-    setCurrentPage(newCurrentPage);
-  };
-
-  return (
-    <View style={styles.container}>
-      <Carousel showsIndicator={false} onPageChange={handlePageChange}>
-          <Box h="100vh">
-            <FindFood navigation={props.navigation} />
-          </Box>
-          <Box h="100vh">
-            <FastDelivery navigation={props.navigation} />
-          </Box>
-          <Box h="100vh">
-            <LiveTracking navigation={props.navigation} />
-          </Box>
-      </Carousel>
-
-      <Indicators count={3} selectedIndex={currentPage} />
+    <View>
+      <Carousel
+        layout="tinder"
+        layoutCardOffset={9}
+        ref={isCarousel}
+        data={data}
+        renderItem={CarouselCardItem}
+        sliderWidth={SLIDER_WIDTH}
+        itemWidth={ITEM_WIDTH}
+        inactiveSlideShift={0}
+        useScrollView={true}
+      />
+      <Pagination
+        dotsLength={data.length}
+        activeDotIndex={index}
+        carouselRef={isCarousel}
+        dotStyle={{
+          width: 10,
+          height: 10,
+          borderRadius: 5,
+          marginHorizontal: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.92)'
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+        tappableDots={true}
+      />
+      
     </View>
-  );
-};
+  )
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    height:"100%",
-  },
 
-  page: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    height:"100%"
-  },
-
-  indicatorsSafeArea: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    display:"none"
-  },
-
-  indicators: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-
-  indicator: {
-    width: 20,
-    height: 20,
-
-    alignItems: "center",
-    justifyContent: "center",
-    marginHorizontal: 5,
-    borderRadius: 10,
-  },
-
-  indicatorText: {
-    fontFamily: "System",
-    fontWeight: "700",
-  },
-});
-
-export default MySlider;
+export default CarouselCards

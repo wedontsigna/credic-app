@@ -56,11 +56,11 @@ export default function LoginScreen({navigation}: {navigation: any}) {
       <Button 
       onPress={() => navigation.navigate('Menu')}
           w="100%"
-        colorScheme="cyan" 
         bg="#1877f2"
         borderRadius='full'  
         _text={{color: 'white' }}         
         shadow={2}
+        size="lg"
        >         
         Se connecter avec facebook</Button>
     </VStack>
@@ -70,9 +70,11 @@ export default function LoginScreen({navigation}: {navigation: any}) {
        w="100%"
        colorScheme="danger"
        bg="#cf3f32"
+       
        borderRadius='full'  
        _text={{color: 'white' }}         
        shadow={2}
+       size="lg"
        onPress={() => navigation.navigate('DessertScreen')}
        >         
              Se connecter avec Google

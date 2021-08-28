@@ -4,9 +4,9 @@
     "slug": "SimpleLivreur",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/carre.png",
     "splash": {
-      "image": "./assets/icon.png",
+      "image": "./assets/carre.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

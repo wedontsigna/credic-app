@@ -38,7 +38,7 @@ export default function NewPassword({navigation}: {navigation: any}) {
         </Heading>
         <Box mt={5}>
           <Center>
-          <Texte texte="Veuillez entrer votre nouveau mot de passe"  fontSize="xs" />
+          <Texte textAlign="center" texte="Veuillez entrer votre nouveau mot de passe"  fontSize="xs" />
           </Center>
         </Box>
         
@@ -51,7 +51,7 @@ export default function NewPassword({navigation}: {navigation: any}) {
             </Box>
             
           <VStack  space={2}  mt={5}>
-            <BoutonBg texte="Suivant" onPress={() => navigation.navigate('MySlider')}/>
+            <BoutonBg texte="Suivant" onPress={() => navigation.navigate('LoginScreen')}/>
           </VStack>
           
         </VStack>
