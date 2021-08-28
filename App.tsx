@@ -87,6 +87,8 @@ const App=() =>{
     Poppins_900Black_Italic,
   });
 
+  console.log(Stack);
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {

@@ -18,19 +18,29 @@ import {
   ChevronDownIcon ,
   Center,
   Select,
+  ScrollView,
 } from 'native-base';
 import { BlockImageTitle } from '../components/BlockImageTitle';
 import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizontal';
 import Texte from '../components/shared/Texte';
 import OurInputs from '../components/shared/OurInput';
+import Footer from '../components/shared/Footer';
 
 export default function GoodMorning({navigation}: {navigation: any}) {
 
  return (
     <NativeBaseProvider>
-      <Box safeArea  p={2} w="100%" my={5} mx={0} bg="#fff" flex={1}>
-        <Box >
-          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>
+      <ScrollView
+        safeArea
+        px={2}
+        flex={1}
+        w="100%"
+        mx='auto'
+        bg="#fff"
+        mt={5}
+      >
+        <Box mt={5}>
+          <Text fontWeight="600" fontSize="lg" fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>
         </Box>
         <Box mt={5}>
           <Texte texte="Livraison à "  mx={2} my="1" />
@@ -58,7 +68,13 @@ export default function GoodMorning({navigation}: {navigation: any}) {
           <BlockImageTitleHorizontal />
           <BlockImageTitleHorizontal />
         </Box>
-      </Box>
+      </ScrollView>
+      <Footer 
+      onPress1={() => navigation.navigate('Menu')}
+      onPress2={() => navigation.navigate('LastOffersScreen')}
+      onPress3={() => navigation.navigate('SignIn')}
+      
+      />
   </NativeBaseProvider>
   );
 }

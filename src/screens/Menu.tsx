@@ -16,6 +16,7 @@ import {
   Divider,
   Center,
   Image,
+  ScrollView,
 } from 'native-base';
 import { RowMenu } from '../components/RowMenu';
 import Titre from '../components/shared/Titre';
@@ -25,33 +26,33 @@ export default function Menu({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider>
-        <Box bg="#fff" flex={1}>
-            <Heading  color='#333' textAlign="center" my={5} fontWeight={100} >
-              <Titre texte="Menu" />
-               
+    
+        <Box bg="#fff" h="100%" mt={5} flex={1}>
+            <Heading mt={5} mx={2}>
+                <Titre  texte="Menu" />
             </Heading>
-            <Box mx={2} bg="#fff" my={5}>
+            <Box mx={2} bg="#fff" mt={5}>
                     <OurInputs placeholder="Recherchez la nourriture" />
             </Box>
-            <HStack alignItems="center" flex={1} bg="#fff" space={4} justifyContent="space-between" mx={2} mt="30%">
-                <HStack alignItems="center" w="35%">
-                    <Box width="100%" h="80vh" bg="red.500" borderTopRightRadius="50px" borderBottomRightRadius="50px">
+            <HStack h="100%">
+                <HStack alignItems="center" borderTopRightRadius="50px" borderBottomRightRadius="50px" bg="red.500" h="100%" space={4} w="30%" flex={1} mt="10%">
+                    <Box  h="100%"  >
                         
                     </Box>
                 </HStack>
-                <HStack alignItems="center" w="60%" h="100vh">
-                    <Box width="100%" h="80vh">
-                        <Box>
+                <HStack alignItems="center" w="70%" h="100%" pt={5}>
+                    <Box w="100%" h="100%" position="relative" right="0px" top="50px">
+                        <Box w="100%">
                             <RowMenu MyTop="20px" texte="Nourritures" />
                         </Box>
-                        <Box>
-                            <RowMenu MyTop="120px" texte="Breuvages" />
+                        <Box  w="100%">
+                            <RowMenu MyTop="70px" texte="Breuvages" />
                         </Box>
-                        <Box>
-                            <RowMenu MyTop="220px" texte="Desserts" onPress={() => navigation.navigate('DessertScreen')} />
+                        <Box  w="100%">
+                            <RowMenu MyTop="120px" texte="Desserts" onPress={() => navigation.navigate('DessertScreen')} />
                         </Box>
-                        <Box>
-                            <RowMenu MyTop="320px" texte="Promotions" />
+                        <Box  w="100%">
+                            <RowMenu MyTop="170px" texte="Promotions" />
                         </Box>
                     </Box>
                 </HStack>

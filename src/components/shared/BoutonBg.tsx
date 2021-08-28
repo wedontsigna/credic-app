@@ -3,7 +3,7 @@ import {Button} from "native-base"
 
 export default function BoutonBg(props:any) {
   return (
-    <Button bg="#ef7914"
+    <Button style={{backgroundColor:"#ef7914"}}
     _text={{ color: "white",fontFamily:"Poppins_600SemiBold" }}
     size="lg"
     w="100%"
