@@ -34,7 +34,7 @@ export default function Footer(props:any) {
             <Center>
               <Icon
                 mb={1}
-                as={<MaterialCommunityIcons name="heart" />}
+                as={<MaterialCommunityIcons name="menu" />}
                 color="white"
                 size="xs"
               />
@@ -56,7 +56,7 @@ export default function Footer(props:any) {
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Dernières offres</Text>
+              <Text color="white" fontSize={14}>Offres</Text>
             </Center>
           </Pressable>
           <Pressable
@@ -68,12 +68,46 @@ export default function Footer(props:any) {
             <Center>
               <Icon
                 mb={1}
-                as={<MaterialCommunityIcons name="heart" />}
+                as={<MaterialCommunityIcons name="home" />}
                 color="white"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Favorites</Text>
+              <Text color="white" fontSize={14}>Accueil</Text>
+            </Center>
+          </Pressable>
+          <Pressable
+            opacity={selected === 0 ? 1 : 0.5}
+            py={2}
+            flex={1}
+            onPress={props.onPress4}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialCommunityIcons name="account" />}
+                color="white"
+                size="xs"
+              />
+
+              <Text color="white" fontSize={14}>Profil</Text>
+            </Center>
+          </Pressable>
+          <Pressable
+            opacity={selected === 0 ? 1 : 0.5}
+            py={2}
+            flex={1}
+            onPress={props.onPress5}
+          >
+            <Center>
+              <Icon
+                mb={1}
+                as={<MaterialCommunityIcons name="menu" />}
+                color="white"
+                size="xs"
+              />
+
+              <Text color="white" fontSize={14}>Plus</Text>
             </Center>
           </Pressable>
           

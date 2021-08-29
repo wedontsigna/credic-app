@@ -60,6 +60,11 @@ import {
 } from "@expo-google-fonts/poppins";
 import HomeScreen from "./src/screens/HomeScreen";
 import theme from "./theme";
+import ProfileScreen from "./src/screens/Profil";
+import PlusCreen from "./src/screens/PlusScreen";
+import PaymentDetailScreen from "./src/screens/PaymentDetail";
+import Notification from "./src/screens/Notification";
+import About from "./src/screens/About";
 
 const Stack = createNativeStackNavigator();
 
@@ -166,6 +171,31 @@ const App=() =>{
             component={Detail}
             options={{ headerShown: false }}
           /> 
+          <Stack.Screen
+            name="Profil"
+            component={ProfileScreen}
+            options={{ headerShown: false }}
+          /> 
+          <Stack.Screen
+            name="Plus"
+            component={PlusCreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="PaymentDetailScreen"
+            component={PaymentDetailScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Notification"
+            component={Notification}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="About"
+            component={About}
+            options={{ headerShown: false }}
+          />
           </Stack.Navigator>
         </NativeBaseProvider>
       </NavigationContainer>

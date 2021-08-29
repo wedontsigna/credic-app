@@ -72,7 +72,9 @@ export default function GoodMorning({navigation}: {navigation: any}) {
       <Footer 
       onPress1={() => navigation.navigate('Menu')}
       onPress2={() => navigation.navigate('LastOffersScreen')}
-      onPress3={() => navigation.navigate('SignIn')}
+      onPress3={() => navigation.navigate('Home')}
+      onPress4={() => navigation.navigate('Profil')}
+      onPress5={() => navigation.navigate('Plus')}
       
       />
   </NativeBaseProvider>

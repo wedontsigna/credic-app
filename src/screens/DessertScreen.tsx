@@ -92,7 +92,7 @@ export default function DessertScreen({navigation}: {navigation: any}) {
             <Box shadow={2}
                 mt={"1"}
                 w='100%'>
-        <Image source={require("../../assets/Dessert4.jpg")} alt="logo" width={'100%'} height={'220'} />
+            <Image source={require("../../assets/Dessert4.jpg")} alt="logo" width={'100%'} height={'220'} />
             <Text bold position='absolute'  color='white' fontWeight={100} bottom={0} m={[4, 4, 8]}>
                Desserts 04 {"\n"}
                <Text color='white' onPress={() => navigation.navigate('Detail')} fontSize={12} mb={1}>
@@ -106,7 +106,9 @@ export default function DessertScreen({navigation}: {navigation: any}) {
       <Footer 
       onPress1={() => navigation.navigate('Menu')}
       onPress2={() => navigation.navigate('LastOffersScreen')}
-      onPress3={() => navigation.navigate('SignIn')}
+      onPress3={() => navigation.navigate('Home')}
+      onPress4={() => navigation.navigate('Profil')}
+      onPress5={() => navigation.navigate('Plus')}
       
       />
     </NativeBaseProvider>
