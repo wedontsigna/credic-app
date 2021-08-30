@@ -5,7 +5,8 @@ import Titre from "../components/shared/Titre"
 import Texte from "../components/shared/Texte"
 
 
-export const Notification = ({navigation}: {navigation: any}) => {
+ const Inbox = ({navigation}: {navigation: any}) => {
+
   const data = [
     {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
@@ -31,36 +32,36 @@ export const Notification = ({navigation}: {navigation: any}) => {
        mt={5}      
      >
     <Heading mt={5} mx={2}>
-        <Titre  texte="Notifications" />
+        <Titre  texte="Inbox" />
     </Heading>
         <Box flex={1} mt={5} mx={2}>
-            <Box bg="#fafafa" p={5}>
+            <Box bg="#f6f6f6" p={5}>
                 <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
             </Box>
-            <Box bg="#ccc" p={5} mt={4}>
+            <Box bg="#f6f6f6" p={5} mt={4}>
                 <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
-            </Box>
-            <Box bg="#fafafa" p={5} mt={4}>
-                <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
             </Box>
             <Box bg="#fafafa" p={5} mt={4}>
                 <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
-            </Box>
-            <Box bg="#ccc" p={5} mt={4}>
-                <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
             </Box>
             <Box bg="#fafafa" p={5} mt={4}>
                 <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
+            </Box>
+            <Box bg="#f6f6f6" p={5} mt={4}>
+                <Texte texte="Your order are a been pickd"/>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
             </Box>
             <Box bg="#fafafa" p={5} mt={4}>
                 <Texte texte="Your order are a been pickd"/>
-                <Text color="#b6b7b7">2 min</Text>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
+            </Box>
+            <Box bg="#f6f6f6" p={5} mt={4}>
+                <Texte texte="Your order are a been pickd"/>
+                <Text color="#ccc">Lorem ipsum dolor sit amet, consectetur adipisicing</Text>
             </Box>
         </Box>
     </ScrollView>
@@ -75,4 +76,4 @@ export const Notification = ({navigation}: {navigation: any}) => {
     </NativeBaseProvider>
   )
 }
-export default Notification;
+export default Inbox;

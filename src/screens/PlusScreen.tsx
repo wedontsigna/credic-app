@@ -40,12 +40,12 @@ export default function PlusCreen({navigation}: {navigation: any}) {
         mt={5}      
       >
         <Heading mt={5} mx={2}>
-            <Titre  texte="Menu" />
+            <Titre  texte="Plus" />
         </Heading>
-        <PlusComponents texte="Payment details" onPress={() =>navigation.navigate('PaymentDetailScreen')} />
+        <PlusComponents texte="My order" onPress={() =>navigation.navigate('MyOrder')} />
         <PlusComponents texte="Payment details" onPress={() =>navigation.navigate('PaymentDetailScreen')}/>
         <PlusComponents texte="notifications" onPress={() =>navigation.navigate('Notification')}/>
-        <PlusComponents texte="Payment details" onPress={() =>navigation.navigate('PaymentDetailScreen')}/>
+        <PlusComponents texte="Inbox" onPress={() =>navigation.navigate('Inbox')}/>
         <PlusComponents texte="About us" onPress={() =>navigation.navigate('About')}/>
 
       </ScrollView>

@@ -65,6 +65,9 @@ import PlusCreen from "./src/screens/PlusScreen";
 import PaymentDetailScreen from "./src/screens/PaymentDetail";
 import Notification from "./src/screens/Notification";
 import About from "./src/screens/About";
+import Inbox  from "./src/screens/Inbox";
+import MyOrder from "./src/screens/MyOrder";
+import CheckOut from "./src/screens/CheckOut";
 
 const Stack = createNativeStackNavigator();
 
@@ -194,6 +197,21 @@ const App=() =>{
           <Stack.Screen
             name="About"
             component={About}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Inbox"
+            component={Inbox}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MyOrder"
+            component={MyOrder}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="CheckOut"
+            component={CheckOut}
             options={{ headerShown: false }}
           />
           </Stack.Navigator>
