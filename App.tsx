@@ -70,6 +70,7 @@ import About from "./src/screens/About";
 import Inbox  from "./src/screens/Inbox";
 import MyOrder from "./src/screens/MyOrder";
 import CheckOut from "./src/screens/CheckOut";
+import { TestProvider } from "./src/Context/GlobalData";
 
 const Stack = createNativeStackNavigator();
 
@@ -99,6 +100,10 @@ const App=() =>{
 
   console.log(Stack);
 
+  const transaction = {
+    c_identifier:"papa et maman"
+  }
+
   // Initialize Apollo Client
   const client = new ApolloClient({
     uri: 'http://localhost:1337/graphql',
@@ -110,7 +115,6 @@ const App=() =>{
   } else {
   return (
   <ApolloProvider client={client}>
-    
     <NavigationContainer>
       <NativeBaseProvider theme={theme}>
           <Stack.Navigator>
@@ -227,8 +231,8 @@ const App=() =>{
           </Stack.Navigator>
         </NativeBaseProvider>
       </NavigationContainer>
-      
-  </ApolloProvider>
+    </ApolloProvider>
+ 
   );
 }
 }

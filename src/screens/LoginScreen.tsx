@@ -12,10 +12,11 @@ import Texte from '../components/shared/Texte';
 import OurInputs from '../components/shared/OurInput';
 import BoutonBg from '../components/shared/BoutonBg';
 import { gql, useMutation, useQuery } from '@apollo/client'
+import { useState } from 'react';
 
 const LOGINMUTATION =gql`
-  mutation {
-    login(input: { identifier: "priam@gmail.com", password: "priam14" }) {
+  mutation LOGINMUTATION($identifier:String!,$password:String!) {
+    login(input: { identifier: $identifier, password: $password }) {
       jwt
     }
   }`
@@ -27,10 +28,36 @@ const LOGINMUTATION =gql`
     }
   `;
 export default function LoginScreen({navigation}: {navigation: any}) {
-  const result = useMutation(LOGINMUTATION)
-  const result1=useQuery(LOGINQUERY)
-  
-  console.log(result1);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [save, setSave] = useState(0);
+
+  const inputs={
+    identifier:email,
+    password:password
+  }
+
+  const [login,{data}]=useMutation(LOGINMUTATION, {
+    variables:inputs
+  });
+  const loginUser=()=>{
+
+    const result=login();
+    const promise = Promise.resolve(result);
+      promise.then((valeur) => {
+
+        if(valeur?.data?.login?.jwt)
+        { 
+          setSave(1);
+          setEmail('');
+          setPassword('');
+
+          navigation.navigate('GoodMorning')
+        }
+      });
+  }
+
 
   return (
   <NativeBaseProvider>
@@ -50,13 +77,29 @@ export default function LoginScreen({navigation}: {navigation: any}) {
    
     <VStack space={2}>
       <Box mt={5}>
-        <OurInputs placeholder="Nom" />
+          <Input
+            borderRadius='full' 
+            fontSize="lg" 
+            type="email"
+            fontFamily="Poppins_300Light"
+            placeholder="Email"
+            onChangeText={email => setEmail(email)}
+            value={email}
+            bg='#e8e8e8' />
       </Box>
       <Box mt={5}>
-        <OurInputs placeholder="Prenom " />
+        <Input
+            borderRadius='full' 
+            fontSize="lg" 
+            type="password"
+            fontFamily="Poppins_300Light"
+            placeholder="Password"
+            onChangeText={password => setPassword(password)}
+            value={password}
+            bg='#e8e8e8' />
       </Box>
       <Box mt={5}> 
-        <BoutonBg texte="Se connecter" onPress={() => navigation.navigate('MySlider')} />
+        <BoutonBg texte="Se connecter" onPress={loginUser} />
       </Box>
     
     </VStack>

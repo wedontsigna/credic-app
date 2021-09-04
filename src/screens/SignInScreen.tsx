@@ -15,7 +15,8 @@ import {
   HStack,
   Divider,
   ScrollView,
-  Center
+  Center,
+  Alert
 } from 'native-base';
 import Titre from '../components/shared/Titre';
 import Texte from '../components/shared/Texte';
@@ -27,14 +28,11 @@ import { useState } from 'react';
 
 const LOGINMUTATION =gql`
 mutation LOGINMUTATION(
-  $nom: String!
-  $adresse: String!
-  $phone: String!
   $username: String!
   $email: String!
   $password: String!
 )  {
-  register(input: {nom:$nom,adresse:$adresse,phone:$phone,username: $username, email: $email, password: $password }) {
+  register(input: {username: $username, email: $email, password: $password }) {
     jwt
     user {
       username
@@ -53,6 +51,8 @@ export default function SignIn({navigation}: {navigation: any}) {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [confirmepassword, setConfirmepasssword] = useState('');
+  const [save, setSave] = useState(0);
+
 
   const inputs={
     nom: nom,
@@ -67,11 +67,40 @@ export default function SignIn({navigation}: {navigation: any}) {
     variables:inputs
   });
 
-
   const saveUser=()=>{
-   console.log(login());
+    const result=login();
+   console.log(result);
+
+    const promise = Promise.resolve(result);
+      promise.then((valeur) => {
+
+        if(valeur?.data?.register?.jwt)
+        {
+          setSave(1);
+          setNom('');
+          setEmail('');
+          setAdresse('');
+          setPhone('');
+          setPassword('');
+          setConfirmepasssword('');
+        }
+      });
   }
 
+  const afficheAlert=()=>{
+
+    if(save==1){
+      return (
+        <Alert w="100%">
+          <Alert.Icon />
+          <Alert.Title>Félicitation</Alert.Title>
+          <Alert.Description>
+              Inscription effectuée avec succès
+          </Alert.Description>
+        </Alert>
+      )
+    }
+  }
  return (
       <NativeBaseProvider>
       <ScrollView
@@ -89,7 +118,7 @@ export default function SignIn({navigation}: {navigation: any}) {
         <Center mt={5}>
           <Texte texte="Ajoutez vos coordonnées pour vous inscrire" textAlign="center" />
         </Center>
-        
+        {afficheAlert()}
         <VStack space={2} mt={5}>
           <Box mt={5}>
             <Input
