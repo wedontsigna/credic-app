@@ -18,6 +18,8 @@ import { Box, NativeBaseProvider,
 } from "native-base";
 import { MaterialCommunityIcons , MaterialIcons} from '@expo/vector-icons';
 
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
 
 // Screen
 import SignIn from "./src/screens/SignInScreen";
@@ -97,10 +99,18 @@ const App=() =>{
 
   console.log(Stack);
 
+  // Initialize Apollo Client
+  const client = new ApolloClient({
+    uri: 'http://localhost:1337/graphql',
+    cache: new InMemoryCache()
+  });
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
   return (
+  <ApolloProvider client={client}>
+    
     <NavigationContainer>
       <NativeBaseProvider theme={theme}>
           <Stack.Navigator>
@@ -217,6 +227,8 @@ const App=() =>{
           </Stack.Navigator>
         </NativeBaseProvider>
       </NavigationContainer>
+      
+  </ApolloProvider>
   );
 }
 }

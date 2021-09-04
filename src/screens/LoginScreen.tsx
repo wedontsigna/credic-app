@@ -11,11 +11,27 @@ import Titre from '../components/shared/Titre';
 import Texte from '../components/shared/Texte';
 import OurInputs from '../components/shared/OurInput';
 import BoutonBg from '../components/shared/BoutonBg';
+import { gql, useMutation, useQuery } from '@apollo/client'
 
+const LOGINMUTATION =gql`
+  mutation {
+    login(input: { identifier: "priam@gmail.com", password: "priam14" }) {
+      jwt
+    }
+  }`
 
-
+  const LOGINQUERY=gql`
+    query{
+      clients
+      {id}
+    }
+  `;
 export default function LoginScreen({navigation}: {navigation: any}) {
-  console.log(navigation);
+  const result = useMutation(LOGINMUTATION)
+  const result1=useQuery(LOGINQUERY)
+  
+  console.log(result1);
+
   return (
   <NativeBaseProvider>
   <Box

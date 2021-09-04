@@ -22,7 +22,7 @@ import Texte from "../components/shared/Texte";
 
 export default function HomeScreen({navigation}: {navigation: any}) {
   return (
-    <Box >
+    <Box flex={1}>
       <Flex h="100%" bg="#fff" w="100%" >
         <Box flex={3} bg="#53afe3">
         </Box>
