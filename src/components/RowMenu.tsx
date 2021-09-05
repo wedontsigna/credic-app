@@ -30,8 +30,8 @@ export function RowMenu(props:any) {
         shadow={6}>
         <Box w="100%" size="md" h="100%"  >
             <Image
-              w="80px"
-              h="80px"
+              w="60px"
+              h="60px"
               position="absolute"
               left="-25%"
               source={{
@@ -40,9 +40,9 @@ export function RowMenu(props:any) {
               rounded="full"
               alt="image1"
               shadow={6}
-              
+              mb={-4}
             /> 
-            <Text p={5} bold={true} fontSize={18} mx={5} my={3} onPress={props.onPress}>
+            <Text p={2} bold={true} w={135} fontSize={18}  mx={5} my={3} onPress={props.onPress}>
               {props.texte}
             </Text>
         </Box>

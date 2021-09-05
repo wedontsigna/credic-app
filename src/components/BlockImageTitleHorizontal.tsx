@@ -16,21 +16,15 @@ export function BlockImageTitleHorizontal() {
         <HStack alignItems="center" w="35%">
         <Box w="100%">
           <AspectRatio ratio={16 / 9}>
-            <Image
-              roundedTop="lg"
-              source={{
-                uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg",
-              }}
-              alt="image1"
-              w="100%"
-            />
+            <Image source={require("../../assets/spagetti.png")} w="100%" h="80px"  alt="logo" size="xl" />
           </AspectRatio>
       </Box>
     </HStack>
         <HStack alignItems="center" w="63%">
           <Box w="100%">
-            <Heading size="sm" w='100%' fontFamily="Poppins_700Bold" ml={-1}>
-              The Garden City
+            <Heading size="sm" w='100%'  ml={-1}>
+              <Text fontFamily="Poppins_700Bold">The Garden City</Text>
+
               <Box w="100%">
                 <Heading
                   size="xs"
@@ -40,14 +34,17 @@ export function BlockImageTitleHorizontal() {
                   _dark={{
                     color: "red.300",
                   }}
-                  fontWeight="500"
+                  fontWeight="100"
                   ml={-0.5}
                   mt={-1}
                 >
-                  The Silicon Valley of India.
+                  <Text fontWeight="200" size="sm" color="#ccc">Café <Text color="#ff0000">.</Text> Nourriture Afro</Text> /
+                  <Text fontWeight={200} size="sm" color="#ccc">(124 rating)</Text>
                 </Heading>
-                </Box>
+                
+              </Box>
             </Heading>
+            
           </Box>
           
         </HStack>

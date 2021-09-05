@@ -27,7 +27,7 @@ export default function Menu({navigation}: {navigation: any}) {
  return (
       <NativeBaseProvider>
     
-        <Box bg="#fff" h="100%" mt={5} flex={1}>
+        <Box bg="#fff" h="100%" flex={1}>
             <Heading mt={5} mx={2}>
                 <Titre  texte="Menu" />
             </Heading>

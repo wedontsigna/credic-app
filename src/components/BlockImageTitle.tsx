@@ -10,6 +10,8 @@ import {
   HStack,
   Stack,
   NativeBaseProvider,
+  ChevronDownIcon,
+  CheckCircleIcon,
 } from "native-base"
 export const BlockImageTitle = () => {
   return (
@@ -21,38 +23,30 @@ export const BlockImageTitle = () => {
       _dark={{
         backgroundColor: "gray.700",
       }}
-      my={5}
+      
     >
       <Box>
         <AspectRatio ratio={16 / 9}>
-          <Image
-            roundedTop="lg"
-            source={{
-              uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg",
-            }}
-            alt="image"
-          />
+            <Image source={require("../../assets/spagetti.png")} w="100%" h="180px"  alt="logo" size="2xl" />
         </AspectRatio>
       </Box>
 
       <Stack p={4} space={2}>
         <Stack space={2}>
-          <Heading size="sm" fontFamily="Poppins_700Bold" ml={-1}>
+          <Heading size="sm" fontFamily="Poppins_700Bold" mb={-2} ml={-1}>
             The Garden City
           </Heading>
           <Heading
             size="xs"
             _light={{
-              color: "red.500",
+              color: "#ccc",
             }}
             _dark={{
-              color: "red.300",
+              color: "#ccc",
             }}
-            fontWeight="500"
-            ml={-0.5}
-            mt={-1}
+            fontWeight="100"
           >
-            The Silicon Valley of India.
+            <CheckCircleIcon color="#ff0000" size="xs" mb={-1} mr={2} /> (124 rating) Café Nourriture africaine
           </Heading>
         </Stack>
         

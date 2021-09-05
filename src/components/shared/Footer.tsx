@@ -17,14 +17,15 @@ import {
 } from 'native-base';
 import { MaterialCommunityIcons , MaterialIcons} from '@expo/vector-icons';
 import { StyleSheet } from 'react-native';
+import { shadow } from 'styled-system';
 
 export default function Footer(props:any) {
   const [selected, setSelected] = React.useState(1);
 
   return (
-       <Box flex={1} bg="white" style={styles.footer} safeAreaTop>
+       <Box flex={1} bg="#fafafa" shadow={5} style={styles.footer} safeAreaTop>
        
-        <HStack bg="primary.500"   alignItems="center" safeAreaBottom shadow={6}>
+        <HStack alignItems="center" safeAreaBottom shadow={6}>
           <Pressable
             opacity={selected === 0 ? 1 : 0.5}
             py={2}
@@ -35,11 +36,11 @@ export default function Footer(props:any) {
               <Icon
                 mb={1}
                 as={<MaterialCommunityIcons name="menu" />}
-                color="white"
+                color="#333"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Menu</Text>
+              <Text color="#333" fontSize={14}>Menu</Text>
             </Center>
           </Pressable>
           <Pressable
@@ -52,11 +53,11 @@ export default function Footer(props:any) {
               <Icon
                 mb={1}
                 as={<MaterialCommunityIcons name="heart" />}
-                color="white"
+                color="#333"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Offres</Text>
+              <Text color="#333" fontSize={14}>Offres</Text>
             </Center>
           </Pressable>
           <Pressable
@@ -69,11 +70,11 @@ export default function Footer(props:any) {
               <Icon
                 mb={1}
                 as={<MaterialCommunityIcons name="home" />}
-                color="white"
+                color="#333"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Accueil</Text>
+              <Text color="#333" fontSize={14}>Accueil</Text>
             </Center>
           </Pressable>
           <Pressable
@@ -86,11 +87,11 @@ export default function Footer(props:any) {
               <Icon
                 mb={1}
                 as={<MaterialCommunityIcons name="account" />}
-                color="white"
+                color="#333"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Profil</Text>
+              <Text color="#333" fontSize={14}>Profil</Text>
             </Center>
           </Pressable>
           <Pressable
@@ -103,11 +104,11 @@ export default function Footer(props:any) {
               <Icon
                 mb={1}
                 as={<MaterialCommunityIcons name="menu" />}
-                color="white"
+                color="#333"
                 size="xs"
               />
 
-              <Text color="white" fontSize={14}>Plus</Text>
+              <Text color="#333" fontSize={14}>Plus</Text>
             </Center>
           </Pressable>
           
@@ -123,6 +124,6 @@ footer: {
     bottom:0,
     left:0,
     right:0,
-    alignSelf:"flex-end"
+    alignSelf:"flex-end",
     }
 });

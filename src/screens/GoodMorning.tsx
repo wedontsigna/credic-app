@@ -19,6 +19,8 @@ import {
   Center,
   Select,
   ScrollView,
+  Stack,
+  Image
 } from 'native-base';
 import { BlockImageTitle } from '../components/BlockImageTitle';
 import { BlockImageTitleHorizontal } from '../components/BlockImageTitleHorizontal';
@@ -33,34 +35,132 @@ export default function GoodMorning({navigation}: {navigation: any}) {
       <ScrollView
         safeArea
         px={2}
+        pb="40px"
         flex={1}
         w="100%"
         mx='auto'
         bg="#fff"
-        mt={5}
+        mb="25px"
       >
         <Box mt={5}>
-          <Text fontWeight="600" fontSize="lg" fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>
+          <Text fontWeight="600" fontSize="lg"  fontFamily="Poppins_900Black">{<>Bonjour Julie</> }</Text>
         </Box>
         <Box mt={5}>
-          <Texte texte="Livraison à "  mx={2} my="1" />
+          <Text color="#ccc">{<>Livraison à </> }</Text>
         </Box>
-        <Box mt={5} >
-          <Text fontWeight="600">{<>Localisation actuelle <ChevronDownIcon  color="#ff0000" position="absolute" /></> }</Text>
+        <Box>
+          <Text fontWeight="900" color="#333">{<>Localisation actuelle <ChevronDownIcon  color="#ff0000" position="absolute" /></> }</Text>
         </Box>
         <Box mt={5}>
           <OurInputs placeholder="Search" />
         </Box>
-        <Box  mt={5}>
-          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Restaurant Populaire</> }</Text>
+        
+        <ScrollView horizontal={true} my={5} mb={0}>
+        <Stack space={3} alignItems="center">
+          {/* <Heading>HStack</Heading> */}
+          <HStack space={3} alignItems="center">
+            <Center
+              size={16}
+              rounded="md"
+              _text={{
+                color: "white",
+              }}
+              
+            >
+              <Image source={require("../../assets/spagetti.png")}   alt="logo" size="md" />
+            </Center>
+            <Center
+              size={16}
+              rounded="md"
+              _text={{
+                color: "white",
+              }}
+            >
+              <Image source={require("../../assets/satay.png")}   alt="logo" size="md" />
+            </Center>
+            <Center
+              size={16}
+              rounded="md"
+              _text={{
+                color: "white",
+              }}
+            >
+             <Image source={require("../../assets/spagetti.png")}   alt="logo" size="md" />
+            </Center>
+            <Center
+              size={16}
+              rounded="md"
+              _text={{
+                color: "white",
+              }}
+            >
+              <Image source={require("../../assets/recipe.png")}   alt="logo" size="md" />
+
+            </Center>
+            <Center
+              size={16}
+              rounded="md"
+              _text={{
+                color: "white",
+              }}
+            >
+              <Image source={require("../../assets/spagetti.png")}   alt="logo" size="md" />
+
+            </Center>
+          </HStack>
+        </Stack>
+        </ScrollView>
+
+        <Box  my={5}>
+          <Text fontWeight="00" fontFamily="Poppins_900Black">{<>Restaurant Populaire</> }</Text>
         </Box>
         <Box>
           <BlockImageTitle />
           <BlockImageTitle />
           <BlockImageTitle />    
         </Box>
+
+        <Box  my={5}>
+          <Text fontWeight="00" fontFamily="Poppins_900Black">{<>Les plus populaires</> }</Text>
+        </Box>
+        <ScrollView horizontal={true}  mb={0}>
+        <Stack space={3} alignItems="center">
+          {/* <Heading>HStack</Heading> */}
+          <HStack space={3} alignItems="center">
+            <Center
+              size="xl"
+              _text={{
+                color: "white",
+              }}
+              
+            >
+              <Image source={require("../../assets/spagetti.png")}   alt="logo" size="2xl" />
+            </Center>
+            <Center
+              size="xl"
+              _text={{
+                color: "white",
+              }}
+              
+            >
+              <Image source={require("../../assets/spagetti.png")}   alt="logo" size="2xl" />
+            </Center>
+            
+            <Center
+              size="xl"
+              _text={{
+                color: "white",
+              }}
+              
+            >
+              <Image source={require("../../assets/spagetti.png")}   alt="logo" size="2xl" />
+            </Center>
+            
+          </HStack>
+        </Stack>
+        </ScrollView>
         <Box  mt={5}>
-          <Text fontWeight="600" fontFamily="Poppins_900Black">{<>Articles récents</> }</Text>
+          <Text fontWeight="600" fontSize="xl" fontFamily="Poppins_900Black">{<>Articles récents</> }</Text>
         </Box>
 
         <Box>
