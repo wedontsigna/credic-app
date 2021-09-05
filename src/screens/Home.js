@@ -3,6 +3,7 @@ import {
     View,
     Text,
     TouchableOpacity
+} from 'react-native';
 
 const Home = ({ navigation }) => {
     return (
