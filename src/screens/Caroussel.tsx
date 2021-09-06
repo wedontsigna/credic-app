@@ -34,7 +34,7 @@ const CarouselCards = (props:any) => {
 
   return (
     <View>
-      {/* <Carousel
+      <Carousel
         layout="tinder"
         layoutCardOffset={9}
         ref={isCarousel}
@@ -44,7 +44,7 @@ const CarouselCards = (props:any) => {
         itemWidth={ITEM_WIDTH}
         inactiveSlideShift={0}
         useScrollView={true}
-      /> */}
+      />
       
     </View>
   )
