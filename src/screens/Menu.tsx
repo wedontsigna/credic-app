@@ -21,12 +21,13 @@ import {
 import { RowMenu } from '../components/RowMenu';
 import Titre from '../components/shared/Titre';
 import OurInputs from '../components/shared/OurInput';
+import Footer from '../components/shared/Footer';
 
 export default function Menu({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider>
-    
+   
         <Box bg="#fff" h="100%" flex={1}>
             <Heading mt={5} mx={2}>
                 <Titre  texte="Menu" />
@@ -36,7 +37,7 @@ export default function Menu({navigation}: {navigation: any}) {
             </Box>
             <HStack h="100%">
                 <HStack alignItems="center" borderTopRightRadius="50px" borderBottomRightRadius="50px" bg="red.500" h="100%" space={4} w="30%" flex={1} mt="10%">
-                    <Box  h="100%"  >
+                    <Box  h="300px"  >
                         
                     </Box>
                 </HStack>
@@ -57,6 +58,16 @@ export default function Menu({navigation}: {navigation: any}) {
                     </Box>
                 </HStack>
             </HStack>
+        </Box>
+        <Box position="fixed" bottom={0} left={0} right={0}>
+        <Footer 
+      onPress1={() => navigation.navigate('Menu')}
+      onPress2={() => navigation.navigate('LastOffersScreen')}
+      onPress3={() => navigation.navigate('GoodMorning')}
+      onPress4={() => navigation.navigate('Profil')}
+      onPress5={() => navigation.navigate('Plus')}
+      
+      />
         </Box>
     </NativeBaseProvider>
   );

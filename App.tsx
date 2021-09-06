@@ -171,7 +171,7 @@ const App=() =>{
           <Stack.Screen
             name="LastOffersScreen"
             component={LastOffersScreen}
-            options={{ headerShown: true }}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="MySlider"

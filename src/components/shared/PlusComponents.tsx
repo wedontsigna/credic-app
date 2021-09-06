@@ -12,7 +12,8 @@ function PlusComponents(props:any) {
             <Center
             size={16}
             rounded="full"
-            bg="#ccc"                   
+            bg="#ccc"
+            float="left"                   
             >
                 <Icon
                     mb={1}

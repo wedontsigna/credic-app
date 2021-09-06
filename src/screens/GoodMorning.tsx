@@ -115,9 +115,9 @@ export default function GoodMorning({navigation}: {navigation: any}) {
           <Text fontWeight="00" fontFamily="Poppins_900Black">{<>Restaurant Populaire</> }</Text>
         </Box>
         <Box>
-          <BlockImageTitle />
-          <BlockImageTitle />
-          <BlockImageTitle />    
+          <BlockImageTitle onPress={() => navigation.navigate('Detail')}/>
+          <BlockImageTitle onPress={() => navigation.navigate('Detail')}/>
+          <BlockImageTitle onPress={() => navigation.navigate('Detail')}/>    
         </Box>
 
         <Box  my={5}>
@@ -135,6 +135,8 @@ export default function GoodMorning({navigation}: {navigation: any}) {
               
             >
               <Image source={require("../../assets/spagetti.png")}   alt="logo" size="2xl" />
+
+              
             </Center>
             <Center
               size="xl"
@@ -164,9 +166,9 @@ export default function GoodMorning({navigation}: {navigation: any}) {
         </Box>
 
         <Box>
-          <BlockImageTitleHorizontal />
-          <BlockImageTitleHorizontal />
-          <BlockImageTitleHorizontal />
+          <BlockImageTitleHorizontal onPress={() => navigation.navigate('Detail')} />
+          <BlockImageTitleHorizontal onPress={() => navigation.navigate('Detail')} />
+          <BlockImageTitleHorizontal onPress={() => navigation.navigate('Detail')} />
         </Box>
       </ScrollView>
       <Footer 

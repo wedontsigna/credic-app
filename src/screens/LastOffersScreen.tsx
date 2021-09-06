@@ -54,7 +54,7 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
             <Image source={require("../../assets/Food8.jpg")} alt="logo" width={'100%'} height={'220'} />
         </Box>
             <Box>
-                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]}>
+                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]} onPress={() => navigation.navigate('Detail')}>
                Café de Noires{"\n"}
                     <Text color='#333' mb={1}>
                         <Text color='#fc6011' bold >49  </Text>
@@ -69,7 +69,7 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
                 <Image source={require("../../assets/Food6.jpg")} alt="logo" width={'100%'} height={'220'} />
             </Box>
             <Box>
-                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]}>
+                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]} onPress={() => navigation.navigate('Detail')}>
                Isso{"\n"}
                     <Text color='#333'  mb={1}>
                     <Text color='#fc6011' bold >49  </Text>
@@ -84,7 +84,7 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
                 <Image source={require("../../assets/Food5.jpg")} alt="logo" width={'100%'} height={'220'} />
             </Box>
             <Box>
-                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]}>
+                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]} onPress={() => navigation.navigate('Detail')}>
                Café Beans{"\n"}
                     <Text color='#333' mb={1}>
                     <Text color='#fc6011' bold >49  </Text>
@@ -99,7 +99,7 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
                 <Image source={require("../../assets/Food4.jpg")} alt="logo" width={'100%'} height={'220'} />
             </Box>
             <Box>
-                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]}>
+                <Text bold  color='black' fontWeight={100} bottom={0} m={[4, 4, 8]} onPress={() => navigation.navigate('Detail')}>
                Café de la Gloire{"\n"}
                     <Text color='#333' mb={1}>
                     <Text color='#fc6011' bold >49  </Text>
@@ -113,7 +113,7 @@ export default function LastOffersScreen({navigation}: {navigation: any}) {
       <Footer 
       onPress1={() => navigation.navigate('Menu')}
       onPress2={() => navigation.navigate('LastOffersScreen')}
-      onPress3={() => navigation.navigate('Home')}
+      onPress3={() => navigation.navigate('GoodMorning')}
       onPress4={() => navigation.navigate('Profil')}
       onPress5={() => navigation.navigate('Plus')}
       

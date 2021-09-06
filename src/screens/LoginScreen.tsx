@@ -113,7 +113,7 @@ export default function LoginScreen({navigation}: {navigation: any}) {
 
     <VStack space={1} mt={5}>
       <Button 
-      onPress={() => navigation.navigate('Menu')}
+      onPress={() => navigation.navigate('GoodMorning')}
           w="100%"
         bg="#1877f2"
         borderRadius='full'  

@@ -11,6 +11,7 @@ import {
   Stack,
   NativeBaseProvider,
   ScrollView,
+  ChevronDownIcon,
 } from "native-base"
 import { MaterialIcons, Ionicons } from "@expo/vector-icons"
 import Footer from "../components/shared/Footer"
@@ -35,21 +36,15 @@ export const Detail = ({navigation}: {navigation: any}) => {
         w="100%"
         mx='auto'
         bg="#fff"
+        mb="60px"
       >
       <Box h="50%">
         <AspectRatio>
-          <Image
-            h="350px"
-            roundedTop="lg"
-            source={{
-              uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg",
-            }}
-            alt="image"
-          />
+          <Image source={require("../../assets/spagetti.png")}   alt="logo" h="300px" width="100%" size="2xl" />
         </AspectRatio>
       </Box>
 
-      <Stack p={5} space={2} mt="-20px" bg="#fff" borderTopRightRadius="50px" borderTopLeftRadius="50px">
+      <Stack p={5} space={2} mt="-60px" bg="#fff" borderTopRightRadius="50px" borderTopLeftRadius="50px">
         <Stack space={2}>
            <Box  position="absolute"
                 zIndex={999}
@@ -62,7 +57,7 @@ export const Detail = ({navigation}: {navigation: any}) => {
             <Icon
                 as={<Ionicons name="ios-chatbubbles" />}
                 color="gray.500"
-                size="2xl"
+                size="xl"
                 _light={{
                   color: "red.500",
                 }}
@@ -72,8 +67,8 @@ export const Detail = ({navigation}: {navigation: any}) => {
               />
            </Box>
           <Heading size="md"  ml={-1} >
-            <Text fontFamily="Poppins_600SemiBold" fontSize="2xl" my={5} mx={5}>
-              The Garden City
+            <Text fontFamily="Poppins_300Light" fontSize="2xl" my={5} mx={5}>
+             Spaguetti italien
              
             </Text>
             
@@ -83,10 +78,10 @@ export const Detail = ({navigation}: {navigation: any}) => {
           <HStack alignItems="center">
             <Icon
               as={<MaterialIcons name="access-time" />}
-              color="gray.500"
+              color="red.500"
               size="md"
             />
-            <Text ml={1} color="gray.500" fontSize="md" fontWeight="500" fontFamily="Poppins_400Regular" >
+            <Text ml={1} color="red.500" fontSize="md" fontWeight="500" fontFamily="Poppins_400Regular" >
               4 Stars rating
               
             </Text>
@@ -102,8 +97,8 @@ export const Detail = ({navigation}: {navigation: any}) => {
                 size="xs"
                 fontWeight="600"
             >
-              <Text fontFamily="Poppins_400Regular" fontSize="md">
-                The Silicon Valley of India.
+              <Text fontFamily="Poppins_400Regular" fontSize="md" fontWeight="600" my={2}>
+                Description
               </Text>
             </Heading>
         </Stack>
@@ -111,21 +106,21 @@ export const Detail = ({navigation}: {navigation: any}) => {
           Bengaluru (also called Bangalore) is the center of India's high-tech
           industry. The city is also known for its parks and nightlife.
         </Text>
-            <Heading
-              fontSize="md"
-                size="xs"
-                fontWeight="600"
-            >
-              <Text fontFamily="Poppins_400Regular" fontSize="md" >
-                The Silicon Valley of India.
-              </Text>
-            </Heading>
+        <Text fontFamily="Poppins_400Regular" fontSize="md" fontWeight="600" my={2}>
+          Custom your order
+        </Text>
+        <Box p={3} h="50px" bg="#ccc" rounded="full" >
+          <Text fontWeight="900" color="#333" >{<>Selectionner la taille de la portion <ChevronDownIcon style={{float:"right"}} color="#ff0000" position="absolute" /></> }</Text>
+        </Box>
+        <Box bg="#ccc" h="50px" p={3} rounded="full"  >
+          <Text fontWeight="900"  color="#333" >{<>Selectionner les ingredients <ChevronDownIcon style={{float:"right"}} color="#ff0000" position="absolute" /></> }</Text>
+        </Box>
       </Stack>
       </ScrollView>
       <Footer 
       onPress1={() => navigation.navigate('Menu')}
       onPress2={() => navigation.navigate('LastOffersScreen')}
-      onPress3={() => navigation.navigate('Home')}
+      onPress3={() => navigation.navigate('GoodMorning')}
       onPress4={() => navigation.navigate('Profil')}
       onPress5={() => navigation.navigate('Plus')}
       

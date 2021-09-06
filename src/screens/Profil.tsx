@@ -89,7 +89,7 @@ export default function ProfileScreen({navigation}: {navigation: any}) {
     <Footer 
       onPress1={() => navigation.navigate('Menu')}
       onPress2={() => navigation.navigate('LastOffersScreen')}
-      onPress3={() => navigation.navigate('Home')}
+      onPress3={() => navigation.navigate('GoodMorning')}
       onPress4={() => navigation.navigate('Profil')}
       onPress5={() => navigation.navigate('Plus')}
       
