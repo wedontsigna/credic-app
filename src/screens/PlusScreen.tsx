@@ -35,9 +35,8 @@ export default function PlusCreen({navigation}: {navigation: any}) {
         px={2}
         flex={1}
         w="100%"
-        mx={2}
         bg="#fff"  
-        mt={5}      
+        pt={2}      
       >
         <Heading mt={5} mx={2}>
             <Titre  texte="Plus" />

@@ -23,7 +23,7 @@ export default function Footer(props:any) {
   const [selected, setSelected] = React.useState(1);
 
   return (
-       <Box flex={1} bg="#fafafa" shadow={5} style={styles.footer} safeAreaTop>
+       <Box flex={1} bg="#fafafa" borderBottom={0} borderLeft={0} borderRight={0} borderTop={2} borderTopColor='#ccc' borderTopWidth={4} style={styles.footer} safeAreaTop>
        
         <HStack alignItems="center" safeAreaBottom shadow={6}>
           <Pressable
@@ -125,5 +125,6 @@ footer: {
     left:0,
     right:0,
     alignSelf:"flex-end",
+    
     }
 });

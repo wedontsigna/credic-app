@@ -13,7 +13,7 @@ function PlusComponents(props:any) {
             size={16}
             rounded="full"
             bg="#ccc"
-            float="left"                   
+            float="left" 
             >
                 <Icon
                     mb={1}
@@ -25,7 +25,7 @@ function PlusComponents(props:any) {
             <Center
                 size={16}
                 rounded="md"
-                w="80%"
+                w="200px"
                 alignItems="initial"
                 >
                 <Texte texte={props.texte} onPress={props.onPress} />

@@ -23,15 +23,22 @@ import Titre from '../components/shared/Titre';
 import Texte from '../components/shared/Texte';
 import BoutonBg from '../components/shared/BoutonBg';
 import Footer from '../components/shared/Footer';
+import { ScrollView } from 'native-base';
 
 export default function PaymentDetailScreen({navigation}: {navigation: any}) {
 
  return (
       <NativeBaseProvider >
-        <Stack mt={5} pt={5} mx={2} bg="#fff"> 
+        <ScrollView
+        safeArea
+        flex={1}
+        w="100%"
+        bg="#fff"  
+        pt={2}      
+      >
+        <Stack pt={5}  bg="#fff" px={2}> 
             <Box
                 mt={5}
-               
                 mx={2}
                >
                 <Titre texte="Payment details" />
@@ -40,20 +47,13 @@ export default function PaymentDetailScreen({navigation}: {navigation: any}) {
                 mb={5}
                 mx={2}
                >
-                <Text fontSize="xl" style={{fontFamily:"Poppins_600SemiBold" }}>Customize your payment method</Text>
+                <Text fontSize="sm" style={{fontFamily:"Poppins_600SemiBold" }}>Customize your payment method</Text>
             </Box>
-            <Box
-                pr={5}
-                pl={5}
-                shadow={9}
-                w={'100%'}
-                bg="#e7e5e4"
-                mx={1}>
+
+            <Box bg="#e7e5e4" h="150px" p={2}>
                 <Box
-                pt={5}
-                pb={3}
-                mb={3}
                 borderWidth={1} 
+                bg="#e7e5e4" 
                 borderBottomColor='warmGray.400'
                 borderColor='transparent'
                 _text={{
@@ -61,23 +61,24 @@ export default function PaymentDetailScreen({navigation}: {navigation: any}) {
                     fontWeight: "bold",
                     color: "black",
                 }}>
-                <Text bold fontSize="md">
-                     Cash/Card on delivery 
-                </Text>
+                    <Text bold fontSize="md">
+                        Cash/Card on delivery
+                    </Text>
                 </Box>
                 <Stack alignItems="center" bg="#e7e5e4" mt={4}>
                     <HStack space={3} alignItems="center" bg="#e7e5e4">
                         <Center
                         size={16}
-                        w="60%"                   
+                        w="50%"                   
                         >
                            <Text fontSize="md" color="#333">
-                               VISA ************ 2187
+                               VISA ******* 2187
                            </Text>
                         </Center>
                         <Center>
                             <Button 
                                 bg="transparent"
+                                size="sm"
                                 border={2}
                                 style={{borderColor:"#ef7914",borderStyle:"solid"}}
                                 _text={{ color: "#ef7914" ,fontFamily:"Poppins_600SemiBold"}}
@@ -89,15 +90,16 @@ export default function PaymentDetailScreen({navigation}: {navigation: any}) {
                 </Stack>
                 
                 <Box  pb={3}>      
-                    <Text bold fontSize="md">
-                    Other Methods 
+                    <Text bold size="md" >
+                        Other Methods 
                     </Text>
                 </Box>
             </Box>
             <Box mt={5} pt={5}>
-                <BoutonBg texte="+  Add Another Credit/Debit Card" />
+                <BoutonBg size="sm" texte="+  Add Another Credit/Debit Card" />
             </Box>
         </Stack>
+        </ScrollView>
         <Footer 
             onPress1={() => navigation.navigate('Menu')}
             onPress2={() => navigation.navigate('LastOffersScreen')}
